@@ -61,11 +61,11 @@ socket.on('ServerToClient', function(data)
 	{
 		var functionName = data.functionName
 
-		if (functionName == "logIn")
+		if (functionName == "populateOnLogin")
 		{
 			
 		}	
-		else if (functionName == "storeGeolocation")
+		else if (functionName == "receiveNewChatMessage")
 		{
 
 		}
