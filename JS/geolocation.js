@@ -15,8 +15,6 @@ Functions:
 
 */
 
-<script>
-
 var locStatus = document.getElementByID("location");
 	
 function getLocation() {
@@ -30,6 +28,3 @@ function getLocation() {
 function showPosition(position) {
 	locStatus.innerHTML = "Latitude is " + position.coords.latitude + " and Longitude is" + position.coords.longitude;	
 }
-
-</script>
-
