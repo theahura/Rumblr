@@ -14,7 +14,6 @@ http://stackoverflow.com/questions/5797852/in-node-js-how-do-i-include-functions
 
 */
 
-console.log("Hello");
 //Type: io; sets up server connection on localhost, channel 3001
 var  io = require('socket.io').listen(3001);
 
@@ -23,8 +22,40 @@ var  io = require('socket.io').listen(3001);
 //On an io socket connection...
 io.sockets.on('connection', function(socket) 
 {
-	console.log("login");
+
 	socket.emit("Hello", {
 		Data: "Welcome to Rumblr"
 	});
+
+	socket.on('ClientToServer', function(data)
+	{
+		if (serverHandler(data) == false)
+		{
+			console.log("There was an error with the server handler");
+			return false;
+		}
+	});
+
 });
+
+
+/*
+	This function takes in data from the socket.io and passes it along to the right locations
+	@param: data; type: object; the data that is passed from the socket.io
+		data.functionName
+	@return: boolean showing whether or not the function worked
+*/
+function serverHandler(data)
+{
+	if(data.functionName)
+	{
+		var functionName = data.functionName;
+
+		if
+	}
+	else
+	{
+		console.log("There was an error: data did not contain functionName");
+		return false;
+	}
+}
