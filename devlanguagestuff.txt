@@ -4,3 +4,11 @@ CLIENT SECRET  3j4-t9EPWlmjTHYtuop5IViD  REDIRECT URIS
 http://rumblr.diagraphictech.com/oauth2callback
  JAVASCRIPT ORIGINS 
 http://rumblr.diagraphictech.com
+
+
+Server Info
+
+54.86.173.127
+user: diagraphic
+pass: diagraphictech
+ssh: none
