@@ -3,10 +3,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve">
-<g id="background">
+<g id="background" display="none">
 </g>
-<g id="Layer_3">
-	<rect fill="#FFFFFF" width="36" height="36"/>
+<g id="Layer_3" display="none">
+	<rect display="inline" fill="#FFFFFF" width="36" height="36"/>
 </g>
 <g id="Layer_5">
 	<circle fill="#EF4642" cx="17.9" cy="18.9" r="16.7"/>
