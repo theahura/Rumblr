@@ -43,7 +43,7 @@ socket.on('connect', function()
 
 socket.on('ServerToClient' function(data)
 {
-<<<<<<< HEAD
+
 	if (data.functionName)
 	{
 		var functionName = data.functionName
@@ -63,7 +63,4 @@ socket.on('ServerToClient' function(data)
 		return false
 	}
 
-	
-=======
->>>>>>> FETCH_HEAD
 });
