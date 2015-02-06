@@ -23,7 +23,6 @@ Functions: T
 
 */
 
-
 //Type: Socket; used to transfer data/commands to the student
 socket = io('http://54.86.173.127:3001');
 
@@ -42,7 +41,26 @@ socket.on('connect', function()
 	alert();
 });
 
-socket.on("Hello", function(data)
+socket.on('ServerToClient' function(data)
 {
-	alert(data.Data);
+	if (data.functionName)
+	{
+		var functionName = data.functionName
+
+		if (functionName == "")
+		{
+
+		}	
+		else if (functionName == "")
+		{
+
+		}
+	}
+	else
+	{
+		console.log("There was an error: data did not contain functionName")
+		return false
+	}
+
+	
 });
