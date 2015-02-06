@@ -13,3 +13,8 @@ Functions:
 
 */
 
+$('.button').mouseover(function() {
+  $('.fist-icon').addClass('animated bounceInLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function() {
+    $(this).removeClass('animated bounceInLeft');
+    });
+});
