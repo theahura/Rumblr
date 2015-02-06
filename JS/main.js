@@ -5,7 +5,7 @@ LOCAL
 This file details all of the code necessary to for users to interact with the rest of rumblr through the UI; basically, the file that passes on user 
 inputs to the server
 
-Functions: 
+Functions: T
 
 	LogIn - User password check to server
 
@@ -19,6 +19,30 @@ Functions:
 	
 	updateNotifications - the generic handler for notifications and stuff that happens while the user is away
 
-	updateLocation() - generic handler for sending the current location to the server, to be called every 10 min or so
+	updateLocation() - generic handler for sending the current location to the server, to be called every 10 min or soT
 
 */
+
+
+//Type: Socket; used to transfer data/commands to the student
+socket = io('http://54.86.173.127:3001');
+
+	/**
+ * When the socket connects (recieving 'connect' as a command) 
+ * it emits it's room choice to the socket.io server, which 
+ * then handles room delegation. 
+ * 
+ * This is done to ensure that multiple teachers only communicate with their own students
+ * 
+ * @Param: 'connect'; name of command that socket is listening for
+ * @Param: function; callback upon recieving command
+ */
+socket.on('connect', function() 
+{
+	alert();
+});
+
+socket.on("Hello", function(data)
+{
+	alert(data.Data);
+});
