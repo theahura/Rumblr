@@ -10,6 +10,8 @@ getDataFromUser() - get the data for a given request/command and pass that to th
 
 sendDataToUser() - send data back to the user client, make sure that the data sent contains event titles and the like
 
+http://stackoverflow.com/questions/5797852/in-node-js-how-do-i-include-functions-from-my-other-files
+
 */
 
 console.log("Hello");
