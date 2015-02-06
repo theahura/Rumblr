@@ -35,4 +35,6 @@ Chat div - where all messages are pushed to
 
 	List with two classes, one for messages from user A, and one for messages from user B, with varying float positions
 
+Maintain multiple chat options
+
 */

@@ -19,4 +19,6 @@ Functions:
 	
 	updateNotifications - the generic handler for notifications and stuff that happens while the user is away
 
+	updateLocation() - generic handler for sending the current location to the server, to be called every 10 min or so
+
 */

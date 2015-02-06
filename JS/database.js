@@ -12,4 +12,8 @@ getNotification(user, note) - get a notification for a username
 
 getTags(user, tags) - get a tag array based on username
 
+getLocation() - get the location of users nearby (random sample)
+
+storeLocation(user, location) - store a location of a user in a hash 
+
 */
