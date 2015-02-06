@@ -1,13 +1,12 @@
 html, body {
-  background-color: orange;
+  background-color: white;
   font-family: 'Chivo';
   font-size: 16px;
   height: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url("img/logo.jpg"); 
-  background-position: left top;
+  background-position: center top;
 }
 header{
   background-image: url('http://static.tumblr.com/eptv8ch/HaMnj8hrt/3120298679_0f5cbc9af6_o.jpg');

@@ -23,6 +23,11 @@ Functions: T
 
 */
 
+//This function checks for the validity of the login.
+function populateOnLogin(boolean a)
+{
+
+}
 
 //Type: Socket; used to transfer data/commands to the student
 socket = io('http://54.86.173.127:3001');
@@ -39,9 +44,36 @@ socket = io('http://54.86.173.127:3001');
  */
 socket.on('connect', function() 
 {
-	
 });
+/**
+* 
+*/
 
-socket.on("Hello", function(data)
+function ClientToServer(data)
 {
+	socket.emit('ClientToServer', data)
+}
+
+socket.on('ServerToClient', function(data)
+{
+
+	if (data.functionName)
+	{
+		var functionName = data.functionName
+
+		if (functionName == "logIn")
+		{
+			
+		}	
+		else if (functionName == "storeGeolocation")
+		{
+
+		}
+	}
+	else
+	{
+		console.log("There was an error: data did not contain functionName")
+		return false
+	}
+
 });
