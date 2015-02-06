@@ -38,11 +38,12 @@ socket = io('http://54.86.173.127:3001');
  */
 socket.on('connect', function() 
 {
-	alert();
+	
 });
 
 socket.on('ServerToClient' function(data)
 {
+<<<<<<< HEAD
 	if (data.functionName)
 	{
 		var functionName = data.functionName
@@ -63,4 +64,6 @@ socket.on('ServerToClient' function(data)
 	}
 
 	
+=======
+>>>>>>> FETCH_HEAD
 });
