@@ -36,8 +36,19 @@ io.sockets.on('connection', function(socket)
 		}
 	});
 
-});
 
+	/*
+		This function takes in data from the server remote files and passes it along to the client
+		
+		@param: data; type: object; the data that is passed from the remote server to the client
+		@return: boolean showing whether or not the function worked
+	*/
+	function ServerToClient(data)
+	{
+		socket.emit("ServerToClient", data);
+	}
+
+});
 
 /*
 	This function takes in data from the socket.io and passes it along to the right locations
@@ -51,7 +62,7 @@ function serverHandler(data)
 	{
 		var functionName = data.functionName;
 
-		if(functionName == "")
+		if(functionName == "logIn")
 		{
 			//call functionName(data)
 		}
