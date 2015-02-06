@@ -38,17 +38,17 @@ socket = io('http://54.86.173.127:3001');
  */
 socket.on('connect', function() 
 {
-	
+	socket.emit('ClientToServer', data)
 });
 
-socket.on('ServerToClient' function(data)
+socket.on('ServerToClient', function(data)
 {
 
 	if (data.functionName)
 	{
 		var functionName = data.functionName
 
-		if (functionName == "")
+		if (functionName == "logIn")
 		{
 
 		}	
