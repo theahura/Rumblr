@@ -51,7 +51,14 @@ function serverHandler(data)
 	{
 		var functionName = data.functionName;
 
-		if
+		if(functionName == "")
+		{
+			//call functionName(data)
+		}
+		else if(functionName == "")
+		{
+			//call functionName(data)
+		}
 	}
 	else
 	{
