@@ -44,8 +44,15 @@ socket = io('http://54.86.173.127:3001');
  */
 socket.on('connect', function() 
 {
-	socket.emit('ClientToServer', data)
 });
+/**
+* 
+*/
+
+function ClientToServer(data)
+{
+	socket.emit('ClientToServer', data)
+}
 
 socket.on('ServerToClient', function(data)
 {
@@ -56,9 +63,9 @@ socket.on('ServerToClient', function(data)
 
 		if (functionName == "logIn")
 		{
-
+			
 		}	
-		else if (functionName == "")
+		else if (functionName == "storeGeolocation")
 		{
 
 		}
