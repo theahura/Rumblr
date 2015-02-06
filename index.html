@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
+  <head>
 
-		<meta chartset="utf-8">
+    <meta chartset="utf-8">
     <meta name="viewport" content="width=device-width">
 
-		<!-- latest jQuery direct from google's CDN -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-		</script>
+    <!-- latest jQuery direct from google's CDN -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
 
-        <!--main CSS stylesheet for page -->
-		<link rel="stylesheet" href="css/mainUI.css" />
-		<link href='http://fonts.googleapis.com/css?family=Chivo:400,900,900italic,400italic' rel='stylesheet' type='text/css'>
+    <!--main CSS stylesheet for page -->
+    <link rel="stylesheet" href="css/mainUI.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Chivo:400,900,900italic,400italic' rel='stylesheet' type='text/css'>
 
-		<!--Google Plus API-->
-		<script src="https://apis.google.com/js/client:platform.js" async defer>
-		</script>
+    <!--Google Plus API-->
+    <script src="https://apis.google.com/js/client:platform.js" async defer>
+    </script>
 
+<<<<<<< Updated upstream
 		<!--Sockets -->
         <script src="http://54.86.173.127:3001/socket.io/socket.io.js"></script>
 
 
 	</head> 
+=======
+  </head> 
+>>>>>>> Stashed changes
 
-	<body>
-		<div class="wrapper">
+  <body>
+    <div class="wrapper">
       <header>
         <h1>Are you ready to Rumble?</h1>
-        <div class="button">Let&#8217;s Go</div>
+<<<<<<< HEAD
+        <a href='login.html'><div class="button">Let&#8217;s Go</div></a> 
+        <p>Learn More</p>
+      </header>
+  
+      <div class="container"> 
+        
+      </div>
+=======
+        <div class="button">
+          <div class="slider">
+            <div class="fist-icon"> </div>
+            <div class="lets-go">Let&#8217;s Go</div>
+          </div>
+        </div>
         <p>Learn More</p>
       </header>
 
-      <div class="container">
-        
-      </div>
+      <section class="container">
+        <div class="grid">
+          <div class="unit one-of-three">
+            <h3>Match</h3>
+            <p>Rumblr uses your location to find people near you who are DTF (that&#8217;s down to fight, of course). </p>
+          </div>
+          <div class="unit one-of-three">
+            <h3>Fight</h3>
+            <p>Chat with others to make plans to duel and show off your competitive edge.</p>
+          </div>
+          <div class="unit one-of-three">
+            <h3>Rematch</h3>
+            <p>When the battle&#8217;s over, report your scores to Rumblr to start tracking your stats. And rematching previous opponents is easy!</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          &copy;2015, John Jay 7
+        </div>
+      </footer>
+>>>>>>> FETCH_HEAD
 
     </div>
 
+<<<<<<< Updated upstream
 		<!--Links to all other files-->
 		<script type="text/javascript" src="JS/chat.js"></script>
         <script type="text/javascript" src="JS/gplus.js"></script>
@@ -45,5 +85,32 @@
 	    <script type="text/javascript" src="JS/main.js"></script>
         <script type="text/javascript" src="JS/mainUI.js"></script>
 	</body> 
+=======
+    <!--Links to all other files-->
+    <script type="text/javascript" src="JS/chat.js"></script>
+    <script type="text/javascript" src="JS/facebook.js"></script>
+    <script type="text/javascript" src="JS/geolocation.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
+    <script type="text/javascript" src="JS/mainUI.js"></script>
+>>>>>>> Stashed changes
 
-<head>
+    <script type="text/javascript">
+      $(function() {
+        $('.button').mouseover(function() {
+          $('.fist-icon').addClass('animated bounceInLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function() {
+            $(this).removeClass('animated bounceInLeft');
+            });
+        });
+      });
+    </script>
+
+  </body> 
+
+<html>
+
+
+
+
+
+
+

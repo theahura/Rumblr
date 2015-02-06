@@ -1,12 +1,12 @@
 html, body {
-  color: white;
+  background-color: orange;
   font-family: 'Chivo';
   font-size: 16px;
   height: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url("img/Logo.jpg"); 
+  background-image: url("img/logo.jpg"); 
   background-position: left top;
 }
 header{
