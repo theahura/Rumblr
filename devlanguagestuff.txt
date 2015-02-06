@@ -8,7 +8,7 @@ http://rumblr.diagraphictech.com
 
 Server Info
 
-54.86.173.127
+host: 54.86.173.127
 user: diagraphic
 pass: diagraphictech
 ssh: none

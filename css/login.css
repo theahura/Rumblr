@@ -1,0 +1,32 @@
+html, body {
+  background-color: orange;
+  font-family: 'Chivo';
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("img/logo.jpg"); 
+  background-position: left top;
+}
+header{
+  background-image: url('http://static.tumblr.com/eptv8ch/HaMnj8hrt/3120298679_0f5cbc9af6_o.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 16rem 0;
+}
+h1{
+  font-size: 4rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.button{
+  background-color: #Ef4642;
+  letter-spacing: 3px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-transform: uppercase;
+  width: 20%;
+}
