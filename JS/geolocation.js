@@ -19,7 +19,7 @@ Functions:
 
 var locStatus = document.getElementByID("location");
 	
-function get_location() {
+function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showPosition);
 	} else {
