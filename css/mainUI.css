@@ -32,14 +32,6 @@ h1{
   text-transform: uppercase;
   width: 15%;
 }
-.button:hover .fist-icon {
-  left: 0;
-  transition: 0.5s;
-}
-.button:hover .lets-go {
-  left: 4rem;
-  transition: 0.5s;
-}
 .slider {
   height: 100%;
 }
