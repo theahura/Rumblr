@@ -28,13 +28,10 @@
     <div class="wrapper">
       <header>
         <h1>Are you ready to Rumble?</h1>
-        <a href='login.html'><div class="button">Let&#8217;s Go</div></a> 
-        <p>Learn More</p>
-  
         <div class="button">
           <div class="slider">
             <div class="fist-icon"> </div>
-            <div class="lets-go">Let&#8217;s Go</div>
+            <div class="lets-go"><a href="login.html">Let&#8217;s Go</a></div>
           </div>
         </div>
         <p>Learn More</p>
@@ -54,7 +51,7 @@
             <h3>Rematch</h3>
             <p>When the battle&#8217;s over, report your scores to Rumblr to start tracking your stats. And rematching previous opponents is easy!</p>
           </div>
-          <button onclick="getLocation()">Get Location</button>
+          <button id="locationButton">Get Location</button>
           <p id="location"></p>
         </div>
       </section>
@@ -73,15 +70,7 @@
 	    <script type="text/javascript" src="JS/geolocation.js"></script>
 	    <script type="text/javascript" src="JS/main.js"></script>
         <script type="text/javascript" src="JS/mainUI.js"></script>
-	</body> 
-
-    <!--Links to all other files-->
-    <script type="text/javascript" src="JS/chat.js"></script>
-    <script type="text/javascript" src="JS/facebook.js"></script>
-    <script type="text/javascript" src="JS/geolocation.js"></script>
-    <script type="text/javascript" src="JS/main.js"></script>
-    <script type="text/javascript" src="JS/mainUI.js"></script>
-
+        
     <script type="text/javascript">
       $(function() {
         $('.button').mouseover(function() {
