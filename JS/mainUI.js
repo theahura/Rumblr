@@ -79,9 +79,12 @@ $(document).ready(function() {
 //generates a div in the People section of Rumbles
 function generateDivOnMatch(isMatch)
 {
-	var div = document.createElement("div");
-	div.insertAfter(".matches");
+	if(isMatch == true){
+		var div = document.createElement("div");
+		div.insertAfter(".matches");
+	}
 }
+	
 
 $('.button').mouseover(function() {
   $('.fist-icon').addClass('animated bounceInLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function() {
