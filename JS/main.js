@@ -70,7 +70,7 @@ socket.on('ServerToClient', function(data)
 		}	
 		/**
 		* receiveNewChatMessage
-		* data should contain: new chat message
+		* data should contain: message author
 		*/
 		else if (functionName == "receiveNewChatMessage")
 		{
