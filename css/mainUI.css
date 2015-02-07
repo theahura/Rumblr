@@ -56,7 +56,9 @@ h1 {
   padding: 4rem 0;
   width: 80%;
 }
-  
+.column-image {
+  max-width: 100%;
+}
 footer {
   background-color: #ef4642;
   color: white;
