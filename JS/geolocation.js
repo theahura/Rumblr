@@ -34,8 +34,8 @@ function getLocation()
 /*
 Function: sendLocation(position)
 --------------------------------------
-This function passes the location of the user to the server. It takes the location of
-the user (it calls this "position") as a parameter. It then creates a variable
+This function passes the location of the user to the server. It takes a variable containing
+the  location of the user (it calls this "position") as a parameter. It then creates a variable
 data and assigns it a function name, the user's latitude and longitude, and the user's
 name. 
 */
@@ -49,7 +49,7 @@ function sendLocation(position) {
 		userName: userName
 	}
 
-	ClientToServer(data)
+	clientToServer(data)
 
 	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
