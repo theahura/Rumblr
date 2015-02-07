@@ -19,7 +19,6 @@ function getLocation()
 {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(sendLocation);
-		alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	} else {
 		document.getElementByID("location").innerHTML = "Sorry, your browser does not support Geolocation services"
 	}
@@ -35,5 +34,7 @@ function sendLocation(position) {
 	}
 
 	ClientToServer(data);
+
+	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
 }
