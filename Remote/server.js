@@ -80,6 +80,7 @@ io.sockets.on('connection', function(socket)
 			{
 				requestNearbyRumbles(data);
 			}
+			console.log(hashTable);
 			return true;
 		}
 		else
