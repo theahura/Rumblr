@@ -95,7 +95,7 @@ io.sockets.on('connection', function(socket)
 	function addToHashtable(object) {
 		// Hashtable data elements
 		hashTable[object.accountId] = {};
-		hashTable[object.accountId].proPic = object.proPic;
+		hashTable[object.accountId].proImage = object.proImage;
 		hashTable[object.accountId].accountId = object.accountId;
 		hashTable[object.accountId].username = object.userName;
 		hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
@@ -145,14 +145,14 @@ io.sockets.on('connection', function(socket)
 		return hashTable[object.accountId].coordinates;
 	}
 
-	function storeImage(object) {
+	function storeProImage(object) {
 		// saves user image as a string
-		hashTable[object.accountId].image = object.image;
+		hashTable[object.accountId].proImage = object.proImage;
 	}
 
-	function getImage(object) {
+	function getProImage(object) {
 		// returns user image
-		return hashTable[object.accountId].image;
+		return hashTable[object.accountId].proImage;
 	}
 
 	function storeEmail(object) {
