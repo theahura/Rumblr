@@ -186,10 +186,11 @@ io.sockets.on('connection', function(socket)
 	}
 
 	function requestNearbyRumbles(object) {	
+					nearestGamersList = []
+
 		if (object.accountId && hashTable[object.accountId] && hashTable[object.accountId].coordinates) {
 			latitude = Math.abs(hashTable[object.accountId].coordinates[0]);
 			longitude = Math.abs(hashTable[object.accountId].coordinates[1]);
-			nearestGamersList = []
 			for (var index in hashTable) {
 				if (latitude-object.latRange  <= Math.abs(hashTable[index].coordinates[0]) 
 					&& Math.abs(hashTable[index].coordinates[0]) <= latitude+object.latRange
