@@ -5,6 +5,8 @@ http://rumblr.diagraphictech.com/oauth2callback
  JAVASCRIPT ORIGINS 
 http://rumblr.diagraphictech.com
 
+API Key
+AIzaSyASBaefXgtUHhCP8tRGDT1rfXM1Vldt_io
 
 Server Info
 

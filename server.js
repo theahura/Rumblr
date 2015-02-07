@@ -47,6 +47,8 @@ io.sockets.on('connection', function(socket)
 */
 function serverHandler(data)
 {
+	console.log(data);
+	
 	if(data.functionName)
 	{
 		var functionName = data.functionName;
@@ -58,10 +60,10 @@ function serverHandler(data)
 			login(data);
 		}
 		//Updates the users geolocation to the database
-		//data includes: google account id, new location
-		else if(functionName == "storeGeoLocation")
+		//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
+		else if(functionName == "storeGeolocation")
 		{
-			storeGeoLocation(data);
+			storeGeolocation(data);
 		}
 		//Updates the chat messages from one user to another to the database
 		//data includes: user name 1, user name 2, message content 
