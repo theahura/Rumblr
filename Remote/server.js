@@ -111,7 +111,7 @@ io.sockets.on('connection', function(socket)
 	function checkUserRegistration(object) {
 		// returns True if user is already registered, False if user is new
 		if (hashTable[object.accountId]) {
-			return hashTable[object.accountId];
+			getProfileList(object)
 		}
 
 		else {

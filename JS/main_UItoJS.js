@@ -23,11 +23,18 @@ $(".circle-right").click(function()
 	if(enemyProfile)
 	{
 		var obj = {
-			enemyProfile: enemyProfile
-			functionName: "storeSwipeRightProfile",
-			accountId: accountId
+			enemyAccountId: enemyProfile.accountId,
+			functionName: "storeEnemyProfileList",
+			userProfile: {
+					userName: userName, 
+					accountId: accountId,
+					emailAddress: emailAddress,
+					proImg: proImg,
+					userGender: userGender, 
+					userAge: userAge
+				}
 		}
-		sendEnemyProfile(obj)
+		socket.emit('clientToServer', obj)
 	}
 
 	$(".newProfile").fadeOut("slow", function(){
