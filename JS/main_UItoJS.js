@@ -12,8 +12,8 @@ $("#login").click(function()
 $("#circle-left").click(function()
 {
 
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeIn("slow")
+	$("").fadeOut("slow")
+	$("").fadeIn("slow")
 
 });
 $("#circle-right").click(function()
