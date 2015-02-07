@@ -76,7 +76,7 @@ function sendMessage(inputText)
 */
 function clientToServer(data)
 {
-	alert(data)
+	console.log(data)
 	socket.emit('clientToServer', data)
 }
 
