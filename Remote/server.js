@@ -15,6 +15,8 @@ var database = require('./database.js');
 
 var io = require('socket.io').listen(3001);
 
+var hashTable = {}
+
 //On an io socket connection...
 io.sockets.on('connection', function(socket) 
 {
@@ -63,7 +65,7 @@ function serverHandler(data)
 
 		if(functionName == "checkUserRegistration")
 		{
-			//checkUserRegistration(data);
+			checkUserRegistration(data);
 		}
 		//Updates the users geolocation to the database
 		//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
@@ -82,6 +84,8 @@ function serverHandler(data)
 		{
 		
 		}
+		console.log(hashTable);
+		return true;
 	}
 	else
 	{
@@ -92,18 +96,10 @@ function serverHandler(data)
 
 
 
-
-
-
-
-var hashTable = {}
-
-
-
 function addToHashtable(object) {
 	// Hashtable data elements
 	hashTable[object.accountId] = {};
-	hashTable[object.accountId].username = object.username;
+	hashTable[object.accountId].username = object.userName;
 	hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
 	hashTable[object.accountId].coordinates = object.coordinates;
 }
