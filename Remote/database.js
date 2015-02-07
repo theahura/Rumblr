@@ -58,3 +58,8 @@ function getGeoLocation(object) {
 	googleID = object.googleID;
 	return hashTable[googleID].location
 }
+
+function nearestGamers(object) {
+	googleID = object.googleID;
+	
+}
