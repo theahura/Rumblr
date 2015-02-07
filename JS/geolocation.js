@@ -10,6 +10,7 @@ Functions:
 
 	getLocation() - get the location from the user, passes to sendLocation()
 	sendLocation(position) - sends the location to the server; takes location as parameter
+	getLocationFromServer - sends the user's account ID to the server to get their previous location
 	
 
 */
@@ -54,6 +55,13 @@ function sendLocation(position) {
 	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
 }
+
+/*
+Function: getLocationFromServer() 
+----------------------------------------
+This function takes no parameters. It sends the user's account ID to the server to get their
+previous location. Not much else to say here. 
+*/
 
 function getLocationFromServer() {
 
