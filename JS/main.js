@@ -44,7 +44,7 @@ socket = io('http://54.86.173.127:3001');
  * This is done to ensure that multiple teachers only communicate with their own students
  * 
  * @Param: 'connect'; name of command that socket is listening for
- * @Param: function; callback upon recieving command
+ * @Param: function; callback upon receiving command
  */
 socket.on('connect', function() 
 {
@@ -54,7 +54,7 @@ socket.on('connect', function()
 */
 function clientToServer(data)
 {
-	console.log(data)
+	alert(data)
 	socket.emit('clientToServer', data)
 }
 

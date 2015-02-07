@@ -1,0 +1,4 @@
+$("#getLocation").click(function()
+{
+    getLocation();
+});
