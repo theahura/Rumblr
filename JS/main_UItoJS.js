@@ -21,7 +21,7 @@ $("#circle-right").click(function()
 
 	$("#profileImage").fadeOut("slow")
 	$("#profileImage").fadeIn("slow")
-
+});
 $("#submitRadius").click(function()
 {
     console.log($(userProx).val())
