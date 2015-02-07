@@ -9,7 +9,6 @@ body {
   text-align: center;
 }
 .proImg {
-  background: url('') no-repeat;
   background-size: contain;
   display: block;
   float: right;

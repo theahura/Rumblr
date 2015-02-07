@@ -36,7 +36,8 @@ function populateOnLogin(obj)
     $('.userName').html(userName);
     $('.userAge').html(userAge);
     $('.userGender').html(userGender);
-    $('.proImg').attr("src", proImg);
+    $('.proImg').css('background-image', 'url(' + proImg + ')');
+    // $('.proImg').attr("src", proImg);
     $('.emailAddress').html(emailAddress);
 
 }
