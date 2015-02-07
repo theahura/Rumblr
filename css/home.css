@@ -49,3 +49,23 @@ ul {
   -webkit-border-radius: 4rem;
   -moz-border-radius: 4rem;
 }
+=======
+   vertical-align: text-top;
+  }
+.chat{
+  margin: 0 auto;
+  width: 60%;
+}
+.chatpage{
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  border: border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+    border-spacing: 300px;
+}
+>>>>>>> Stashed changes
