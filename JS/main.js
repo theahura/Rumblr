@@ -49,6 +49,20 @@ socket = io('http://54.86.173.127:3001');
 socket.on('connect', function() 
 {
 });
+
+socket.on("incomingMessage", function(data)
+{
+	console.log(data.message);
+});
+
+function sendMessage(inputText)
+{
+	socket.emit("message", {
+		text:inputText
+	});	
+}
+
+
 /**
 * 
 */
@@ -98,12 +112,7 @@ socket.on('serverToClient', function(data)
 function requestProfileFromServer() {
 
 	var profile = {
-		functionName: "requestProfileFromServer",
-		accountId: null,
-		userAge: null,
-		userGender: null,
-		proImg: null,
-		currentLocation: null
+		functionName: "requestProfileFromServer"
 	}
 	
 	clientToServer(profile)
@@ -114,6 +123,14 @@ function requestProfileFromServer() {
 
 function getProfileFromServer(profile) {
 
-	return profile
+	var enemyProfile = {
+		enemyUserName: profile.userName,
+	 	enemyAccountId:  profile.accountId,
+		enemyProImg: profile.proImg,
+		enemyUserGender: profile.userGender,
+		enemyUserAge: profile.userAge,
+		enemyCurrentLocation: profile.currentLocation
+	}
+
 }
 

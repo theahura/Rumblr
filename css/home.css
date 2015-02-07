@@ -1,5 +1,4 @@
 body {
-  background-color: #FFFFFF;
   color: #EF4642;
 }
 .top-nav {
@@ -43,13 +42,17 @@ ul {
   text-align: center;
 }
 .proImg {
-  background: url() no-repeat;
+  background: url('') no-repeat;
+  background-size: contain;
+  display: block;
   float: right;
   height: 8rem;
   width: 8rem;
   border-radius: 4rem;
   -webkit-border-radius: 4rem;
   -moz-border-radius: 4rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .chat{
   margin: 0 auto;
@@ -78,73 +81,94 @@ td{
      right:249px;
      top:10px; 
 }
+hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 50%;
+    border-color: #EF4642
+    color: #EF4642;
 
-.spacer-5
-{
+}
+.spacer-5 {
   height: 5%;
   width: 100%;
 }
 
-.button
-{
+.button {
   cursor: pointer;
 }
 
-.cover
-{
-   position:fixed;
-    top:0px;
-    left:0px;
-    z-index: 5;
-    width:100%;
-    height:100%;
-    background-color:rgba(200,200,200,.5);
-    text-align: center;
+.cover {
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index: 5;
+  width:100%;
+  height:100%;
+  background-color:rgba(200,200,200,.5);
+  text-align: center;
 }
 
-  .logInButton
-  {
+  .logInButton {
     color: white;
     margin-top: 20%;
   }
-
-.profileImage
-{
+  .logInText {
+    padding: 1.5rem 0;
+  }
+.profileImage {
   background: ;
 }
-
-
-.swipeContainer
-{
+.swipeContainer {
   color: red;
   width: 100%;
   height: 100%;
 }
-
-  .swipeContainer li
-  {
+  .swipeContainer li {
     display: inline-block;
-    width: 33.3%;
+    width: 33%;
     height: 100%;
     vertical-align: top;
   }
-    .newProfile
-    {
+    .newProfile {
       background: red;
       width: 100%;
       height: 100%;
     }
-
-      .otherUserProfilePicture
-      {
+      .otherUserProfilePicture {
         background: orange;
         width: 60%;
         height: 40%;
         margin-left: 20%;
       }
-      
-      .otherUserInfo
-      {
+      .otherUserInfo {
         color: white;
         text-align: center;
       }
+.circle-left {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  padding-top: 15px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 230px;
+  float: right;
+}
+.circle-right {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  padding-top: 15px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 230px;
+  float: left;
+}

@@ -41,6 +41,7 @@ function loginCallback(result)
 {
     if(result['status']['signed_in'])
     {
+	$('.cover').hide();
         var request = gapi.client.plus.people.get(
         {
             'userId': 'me'
@@ -72,15 +73,14 @@ function loginCallback(result)
 		userName: resp['displayName'],
 		accountId: resp['id'],
 		proImage: resp['image']['url'],
-		userAge: resp['ageRange']['min'],
 		userGender: resp['gender'],
-		functionName: "logIn"
+		functionName: "checkUserRegistration"
 		 
 	    }
 
 	    populateOnLogin(obj)
 	    clientToServer(obj)	   
-
+        getLocation()
         });
  
     }

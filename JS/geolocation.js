@@ -24,7 +24,6 @@ If not, it displays an error message.
 */
 
 function getLocation() {
-
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(sendLocation)
 	} else {
@@ -90,21 +89,21 @@ function getLocationFromServer(data) {
 
 //This function requests nearby rumbles
 
-function requestNearbyRumblers(area) {
+function requestNearbyRumbles(area) {
 
-	var nearbyRumblers = {
-		functionName: "requestNearbyRumblers",
+	var requestNearbyRumblesObject = {
+		functionName: "requestNearbyRumbles",
 		radius: area,
 		location: currentLocation
 	}
 
-	clientToServer(nearbyRumblers)
+	clientToServer(requestNearbyRumblesObject)
 
 }
 
 //This function returns nearby rumbles
 
-function getNearbyRumblers(rumblers) {
+function getNearbyRumblers(rumbles) {
 
-	nearbyRumblers = rumblers
+	nearbyRumbles = rumbles
 }

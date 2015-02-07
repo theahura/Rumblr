@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+    <head  style="background-color:#FFFFFF">
       <meta http-equiv="Content-Type" content="width=device-width" charset="UTF-8" />
       <title>Rumblr</title>
 
@@ -18,28 +18,23 @@
       <script src="https://apis.google.com/js/client:platform.js" async defer>
       </script>
 
+      <!--Sockets -->
+      <script src="http://54.86.173.127:3001/socket.io/socket.io.js"></script>
+
       <!--fullPage.js -->
       <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-      <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
     </head>
     
     <body>
-
-      <div class="cover">
-          <div class="button logInButton" id="login">Log In</div> 
-      </div>
       
-      <ul class="top-nav dropdown" id="menu">
-        <li><img src="img/Logo.png"; height="4rem"; width="auto"></li>
-        <li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Rumbles</a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage">Profile</a></li>
-      </ul>
+      <div class="cover">
+        <div class="button logInButton" id="login"><p class="logInText">Log In</p></div> 
+      </div>
 
-      <div class="fullpage">
-        <div class="section">
-          <div class="slide">
+      <div id="fullpage">
+        <div class="section"  style="background-color:#FFFFFF">
+          <div  style="background-color:#FFFFFF" class="slide">
             <div class="container">
               <div class="grid">
                 <div class="unit span-grid"><h1>RUMBLES</h1></div>
@@ -64,10 +59,11 @@
               </div>
             </div>
           </div>
-          <div class="slide active">
+          <div  style="background-color:#FFFFFF" class="slide active">
             <h1>HOME</h1>
             <ul class="swipeContainer"> 
               <li>
+                <div class="circle-left"><h1>&#x2718</h1></div>
               </li>
               <li>
                 <div class="newProfile">
@@ -89,10 +85,11 @@
                 </div>
               </li>
               <li>
+                <div class="circle-right"><h1>&#10003</h1></div>
               </li>
             </ul>
           </div>
-          <div class="slide">
+          <div class="slide"  style="background-color:#FFFFFF">
             <h1> User Profile </h1>
 
             <div class="container">
@@ -101,7 +98,7 @@
                   <div class="proImg"></div>
                 </div>
                 <div class="unit two-of-three">
-                  <div class="userName"><h2>Username&#8217;s Profile</h2></div>
+                  <h2><span class="userName"></span>&#8217;s Profile</h2>
                   <p><strong>Age:</strong><span class="userAge"></span></p>
                   <p><strong>Gender:</strong><span class="userGender"></span></p>
                   <p><strong>Current Location:</strong><span class="currentLocation"></span></p>
@@ -118,10 +115,11 @@
         <!--Links to all other files-->
       <script type="text/javascript" src="JS/settings.js"></script>
       <script type="text/javascript" src="JS/gplus.js"></script>
+      <script type="text/javascript" src="JS/jquery.fullPage.js"></script>
       <script type="text/javascript" src="JS/main.js"></script>
-      <script type="text/javascript" src="JS/chat.js"></script>
+      <!--<script type="text/javascript" src="JS/chat.js"></script>-->
       <script type="text/javascript" src="JS/geolocation.js"></script>
       <script type="text/javascript" src="JS/mainUI.js"></script>
-
+      <script type="text/javascript" src="JS/main_UItoJS.js"></script>
     </body>
 </html>
