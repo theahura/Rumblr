@@ -48,7 +48,7 @@ socket.on('connect', function()
 /**
 * 
 */
-userName = "DickButt"
+
 function ClientToServer(data)
 {
 	socket.emit('ClientToServer', data)
