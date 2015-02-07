@@ -54,3 +54,15 @@ function sendLocation(position) {
 	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
 }
+
+function getLocationFromServer() {
+
+	var data = {
+		functionName: "getLocationFromServer"
+		userName: userName
+	}
+
+	clientToServer(data)
+
+	alert("Sent request to server")
+}
