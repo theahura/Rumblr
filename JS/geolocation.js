@@ -130,6 +130,7 @@ function requestNearbyRumbles() {
 
 function getNearbyRumbles(data) {
 
+	console.log(data)
 	nearbyRumbles = data.rumblesList
 
 	if (nearbyRumbles.length > 0 ) {

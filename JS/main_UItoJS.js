@@ -15,6 +15,11 @@ $("#submitRadius").click(function()
     convertInputMilesToDegrees($(userProx).val())
 });
 
+$("#getNearbyRumblesButton").click(function()
+{
+	requestNearbyRumbles();
+})
+
 // $("#getLocationFromServer").click(function()
 // {
 //     getLocationFromServer();
