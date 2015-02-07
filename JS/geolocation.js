@@ -58,7 +58,7 @@ function sendLocation(position) {
 function getLocationFromServer() {
 
 	var data = {
-		functionName: "getLocationFromServer"
+		functionName: "getLocationFromServer",
 		userName: userName
 	}
 
