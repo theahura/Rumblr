@@ -22,8 +22,8 @@ If it does, it gets the user's location and passes it to the sendLocation functi
 If not, it displays an error message. 
 */
 
-function getLocation()
-{
+function getLocation() {
+
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(sendLocation)
 	} else {
@@ -46,7 +46,7 @@ function sendLocation(position) {
 		functionName: "storeGeolocation",
 		userPositionLatitude: position.coords.latitude,
 		userPositionLongitude: position.coords.longitude,
-		userName: userName
+		accountId: userName
 	}
 
 	clientToServer(data)
@@ -59,7 +59,7 @@ function getLocationFromServer() {
 
 	var data = {
 		functionName: "getLocationFromServer",
-		userName: userName
+		accountId: userName
 	}
 
 	clientToServer(data)
