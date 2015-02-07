@@ -41,7 +41,7 @@ function loginCallback(result)
 {
     if(result['status']['signed_in'])
     {
-	$('#login').attr('style', 'display:none');
+	$('.cover').hide();
         var request = gapi.client.plus.people.get(
         {
             'userId': 'me'
