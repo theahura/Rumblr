@@ -23,9 +23,14 @@ Functions: T
 
 */
 //This function checks for the validity of the login.
-function populateOnLogin()
+function populateOnLogin(obj)
 {
-
+    userName = obj.userName
+    accountId = obj.accountId
+    proImg = obj.proImg
+    userAge = obj.userAge
+    userGender = obj.userGender
+    alert(userName)
 }
 
 //Type: Socket; used to transfer data/commands to the student
@@ -69,7 +74,7 @@ socket.on('serverToClient', function(data)
 		}	
 		/**
 		* receiveNewChatMessage
-		* data should contain: message author
+		* data should contain: message sender's userName
 		*/
 		else if (functionName == "receiveNewMessage")
 		{
@@ -87,6 +92,7 @@ socket.on('serverToClient', function(data)
 	}
 
 });
+<<<<<<< HEAD
 
 function requestProfileFromServer() {
 
@@ -107,3 +113,5 @@ function getProfileFromServer(profile) {
 	return profile
 }
 
+=======
+>>>>>>> origin/master
