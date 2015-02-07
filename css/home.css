@@ -92,7 +92,7 @@ hr{
   background: ;
 }
 .swipeContainer {
-  color: red;
+  color: #ef4642;
   width: 100%;
   height: 100%;
 }
@@ -103,7 +103,7 @@ hr{
     vertical-align: top;
   }
     .newProfile {
-      background: red;
+      background: #ef4642;
       width: 100%;
       height: 100%;
     }
