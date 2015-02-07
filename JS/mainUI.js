@@ -52,7 +52,6 @@ $(document).ready(function() {
 
         //Design
         controlArrows: true,
-        verticalCentered: true,
         resize : true,
         sectionsColor : ['#ccc', '#fff'],
         paddingTop: '3em',
