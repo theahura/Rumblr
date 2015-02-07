@@ -92,13 +92,13 @@ function getLocationFromServer(data) {
 
 function requestNearbyRumbles(area) {
 
-	var nearbyRumbles = {
+	var requestNearbyRumblesObject = {
 		functionName: "requestNearbyRumbles",
 		radius: area,
 		location: currentLocation
 	}
 
-	clientToServer(nearbyRumbles)
+	clientToServer(requestNearbyRumblesObject)
 
 }
 
