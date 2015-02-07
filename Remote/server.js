@@ -16,8 +16,11 @@ var database = require('./database.js');
 //On an io socket connection...
 io.sockets.on('connection', function(socket) 
 {
-	socket.on('message', function(message)){
-		io.emit('message', message)
+	socket.on('message', function(data)){
+
+		socket.emit('incomingMessage', {
+			message: data.text
+		})
 	}
 
 	socket.on('clientToServer', function(data)
