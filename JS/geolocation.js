@@ -15,16 +15,24 @@ Functions:
 
 */
 
-var locStatus = document.getElementByID("location");
-	
-function getLocation() {
+function getLocation()
+{
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPosition);
+		navigator.geolocation.getCurrentPosition(sendLocation);
 	} else {
-		locStatus.innerHTML = "Sorry, your browser does not support Geolocation services"
+		document.getElementByID("location").innerHTML = "Sorry, your browser does not support Geolocation services"
 	}
 }
 
-function showPosition(position) {
-	locStatus.innerHTML = "Latitude is " + position.coords.latitude + " and Longitude is" + position.coords.longitude;	
+function sendLocation(position) {
+
+	var data = {
+		functionName: "storeGeoLocation",
+		userPositionLatitude: position.coords.latitude,
+		userPositionLongitude: position.coords.longitude,
+		userName: userName
+	}
+
+	ClientToServer(data);
+	
 }
