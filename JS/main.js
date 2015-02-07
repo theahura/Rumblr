@@ -52,6 +52,7 @@ socket.on('connect', function()
 function ClientToServer(data)
 {
 	socket.emit('ClientToServer', data)
+	alert("worked")
 }
 
 socket.on('ServerToClient', function(data)
