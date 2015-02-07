@@ -141,12 +141,13 @@ io.sockets.on('connection', function(socket)
 	}
 
 	function getProfileList(object) {
+		console.log("THIS WAS CALLED")
 		// returns user's enemyProfileList
 		var data = {
 			enemyProfileList: hashTable[object.accountId].enemyProfileList,
 			functionName: "receiveEnemyProfileList"
 		}
-
+		console.log(hashTable[object.accountId].enemyProfileList)
 		serverToClient(data)
 	}
 

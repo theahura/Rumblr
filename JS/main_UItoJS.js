@@ -55,6 +55,18 @@ $("#getNearbyRumblesButton").click(function()
 	requestNearbyRumbles();
 })
 
+
+
+$(".refresh").click(function()
+{
+	var obj = { 
+		functionName: "getProfileList", 
+		accountId: accountId
+	}
+
+	clientToServer(obj)
+})
+
 // $("#getLocationFromServer").click(function()
 // {
 //     getLocationFromServer();

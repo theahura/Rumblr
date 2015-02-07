@@ -106,9 +106,9 @@ socket.on('serverToClient', function(data)
 		{
 			getNearbyRumbles(data)
 		}
-		else if(functionName == "receiveEnemyProfiles")
+		else if(functionName == "receiveEnemyProfileList")
 		{
-			receiveEnemyProfiles(data); 
+			receiveEnemyProfileList(data); 
 		}
 	}
 	else
@@ -118,6 +118,13 @@ socket.on('serverToClient', function(data)
 	}
 
 });
+
+
+function receiveEnemyProfileList(data)
+{
+	console.log(data);
+	alert();
+}
 
 //This function returns the profile requested in the previous function
 
