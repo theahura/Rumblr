@@ -120,25 +120,19 @@ socket.on('serverToClient', function(data)
 
 function getProfileFromList(profile) {
 
-	var enemyProfile = {
-		enemyUserName: profile.userName,
+	enemyProfile = {
+		enemyUserName: profile.username,
 	 	enemyAccountId:  profile.accountId,
 		enemyProImg: profile.proImg,
 		enemyEmailAddress: profile.emailAddress,
 		enemyUserGender: profile.userGender,
 		enemyUserAge: profile.userAge,
-		enemyCurrentLocation: profile.currentLocation
-
-		$('.enemyUserName').html(enemyUserName);
-		$('.enemyEmailAddress').html(enemyEmailAddress);
-		$('.enemyUserGender').html(enemyUserGender);
-		$('.enemyUserAge').html(enemyUserAge);
-		
-
-
-
+		enemyCurrentLocation: profile.currentLocation	
 	}
-
+	$('.enemyUserName').html(enemyProfile.enemyUserName);
+	$('.enemyEmailAddress').html(enemyProfile.enemyEmailAddress);
+	$('.enemyUserGender').html(enemyProfile.enemyUserGender);
+	$('.enemyUserAge').html(enemyProfile.enemyUserAge);
 }
 
 function convertInputMilesToDegrees(miles) {
