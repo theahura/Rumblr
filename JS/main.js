@@ -71,9 +71,9 @@ socket.on('serverToClient', function(data)
 		* receiveNewChatMessage
 		* data should contain: message author
 		*/
-		else if (functionName == "receiveNewChatMessage")
+		else if (functionName == "receiveNewMessage")
 		{
-			receiveNewChatMessage(data)
+			receiveNewMessage(data)
 		}
 		else if(functionName == "")
 		{
@@ -87,3 +87,23 @@ socket.on('serverToClient', function(data)
 	}
 
 });
+
+function requestProfileFromServer() {
+
+	var profile = {
+		functionName: "requestProfileFromServer"
+		accountId: null
+		userAge: null
+		userGender: null
+		proImg: null
+	}
+	
+	clientToServer(profile)
+
+}
+
+function getProfileFromServer(profile) {
+
+	return profile
+}
+
