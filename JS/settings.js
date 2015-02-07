@@ -4,11 +4,18 @@ List of applicable variables, such as userName, gameSettings, etc.
 
 */
 
-var userName = "DickButt"
+var userName
 var accountId
 var proImg = new Image()
 var userGender
 var userAge
-var currentLocation
+currentLocation = {
+	currentLongitude = null,
+	currentLatitude = null
+}
 var competitionSettings
 var nearbyRumbles = {}
+range = {
+	longitudeRange = 0.07246,
+	latitudeRange = 0.07246
+}
