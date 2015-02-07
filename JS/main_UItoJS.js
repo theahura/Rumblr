@@ -12,14 +12,12 @@ $("#login").click(function()
 $("#circle-left").click(function()
 {
 
-	$("").fadeOut("slow")
-	$("").fadeIn("slow")
+	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
 
 });
 $("#circle-right").click(function()
 {
-	$("").fadeOut("slow")
-	$("").fadeIn("slow")
+	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
 });
 $("#submitRadius").click(function()
 {
