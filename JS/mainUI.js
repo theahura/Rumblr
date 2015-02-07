@@ -27,7 +27,7 @@ $(document).ready(function() {
         navigationPosition: 'right',
         navigationTooltips: ['firstSlide', 'secondSlide'],
         slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+        slidesNavPosition: 'top',
 
         //Scrolling
         css3: true,
