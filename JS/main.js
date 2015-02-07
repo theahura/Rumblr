@@ -98,12 +98,7 @@ socket.on('serverToClient', function(data)
 function requestProfileFromServer() {
 
 	var profile = {
-		functionName: "requestProfileFromServer",
-		accountId: null,
-		userAge: null,
-		userGender: null,
-		proImg: null,
-		currentLocation: null
+		functionName: "requestProfileFromServer"
 	}
 	
 	clientToServer(profile)
@@ -114,6 +109,14 @@ function requestProfileFromServer() {
 
 function getProfileFromServer(profile) {
 
-	return profile
+	var enemyProfile = {
+		enemyUserName: profile.userName,
+	 	enemyAccountId:  profile.accountId,
+		enemyProImg: profile.proImg,
+		enemyUserAge: profile.userAge,
+		enemyUserGender: profile.userGender,
+		enemyCurrentLocation: profile.currentLocation
+	}
+
 }
 
