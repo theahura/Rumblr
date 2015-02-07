@@ -42,7 +42,7 @@ ul {
   font-style: normal;
   text-align: center;
 }
-.profileImage {
+.proImg {
   background: url() no-repeat;
   float: right;
   height: 8rem;
@@ -70,11 +70,20 @@ td{
     vertical-align: center;
 }
 
+.headerDivider {
+     border-left:1px solid #38546d; 
+     border-right:1px solid #16222c; 
+     height:80px;
+     position:absolute;
+     right:249px;
+     top:10px; 
+}
 
-
-
-
-
+.spacer-5
+{
+  height: 5%;
+  width: 100%;
+}
 
 .button
 {
@@ -98,3 +107,44 @@ td{
     color: white;
     margin-top: 20%;
   }
+
+.profileImage
+{
+  background: ;
+}
+
+
+.swipeContainer
+{
+  color: red;
+  width: 100%;
+  height: 100%;
+}
+
+  .swipeContainer li
+  {
+    display: inline-block;
+    width: 33.3%;
+    height: 100%;
+    vertical-align: top;
+  }
+    .newProfile
+    {
+      background: red;
+      width: 100%;
+      height: 100%;
+    }
+
+      .otherUserProfilePicture
+      {
+        background: orange;
+        width: 60%;
+        height: 40%;
+        margin-left: 20%;
+      }
+      
+      .otherUserInfo
+      {
+        color: white;
+        text-align: center;
+      }

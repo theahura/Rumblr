@@ -9,3 +9,6 @@ var accountId
 var proImg = new Image()
 var userAge
 var userGender
+var currentLocation
+var competitionSettings
+var nearbyRumblers

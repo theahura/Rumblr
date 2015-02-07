@@ -14,3 +14,7 @@ $("#getLocationFromServer").click(function()
     getLocationFromServer();
 });
 		  
+$(.userName).html(userName);
+$(.userAge).html(userAge);
+$(.userGender).html(userGender);
+$(.currentLocation).html(currentLocation);

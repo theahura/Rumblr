@@ -134,4 +134,7 @@ footer {
    margin-left: 0;
    display: block;
  }
+input{
+  vertical-align: center;
+}
 }
