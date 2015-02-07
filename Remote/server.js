@@ -57,9 +57,9 @@ function serverHandler(data)
 
 		//sends data to login function
 		//data includes: google account id, username
-		if(functionName == "logIn")
+		if(functionName == "login")
 		{
-			logIn(data);
+			login(data);
 		}
 		//Updates the users geolocation to the database
 		//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
