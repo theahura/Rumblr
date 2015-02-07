@@ -115,6 +115,10 @@ socket.on('serverToClient', function(data)
 
 });
 
+function sendEnemyProfile(profile)
+{
+	socket.emit('clientToServer', profile)
+}
 
 //This function returns the profile requested in the previous function
 
