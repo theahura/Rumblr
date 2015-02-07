@@ -152,7 +152,7 @@ function requestNearbyRumbles(object) {
 	longitude = hashTable[object.accountId].coordinates[1];
 	nearestGamersList = []
 	for (var index in hashTable) {
-		if (latitude-object.latRange <= hashTable[index].coordinates[0] 
+		if (latitude-object.latRange  <= hashTable[index].coordinates[0] 
 			&& hashTable[index].coordinates[0] <= latitude+object.latRange
 			&& longitude-object.longRange <= hashTable[index].coordinates[1]
 			&& hashTable[index].coordinates[1] <= longitude+object.longRange

@@ -23,10 +23,23 @@ If it does, it gets the user's location and passes it to the sendLocation functi
 If not, it displays an error message. 
 */
 
-function getLocation() {
+function getLocation(sendToServer) {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(sendLocation)
 	} else {
+		alert("Sorry, your browser does not support Geolocation services")
+	}
+}
+
+
+function getLocationForLogin()
+{
+	if(navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(sendLocationForLogin)
+	}
+	else
+	{
 		alert("Sorry, your browser does not support Geolocation services")
 	}
 }
@@ -56,6 +69,12 @@ function sendLocation(position) {
 
 	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
+}
+
+function sendLocationForLogin(position)
+{
+	currentLocation.currentLongitude = position.coords.longitude
+	currentLocation.currentLatitude = position.coords.latitude
 }
 
 /*
