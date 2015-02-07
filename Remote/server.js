@@ -11,8 +11,6 @@ http://stackoverflow.com/questions/5797852/in-node-js-how-do-i-include-functions
 
 //Type: io; sets up server connection on localhost, channel 3001
 
-var database = require('./database.js');
-
 var io = require('socket.io').listen(3001);
 
 var hashTable = {}
@@ -143,8 +141,17 @@ io.sockets.on('connection', function(socket)
 
 	function getGeoLocation(object) {
 		// returns latitude and longitude of user
-		accountId = object.accountId;
-		return hashTable[accountId].coordinates;
+		return hashTable[object.accountId].coordinates;
+	}
+
+	function storeImage(object) {
+		// saves image as a string
+		hashTable[object.accountId].image = object.image;
+	}
+
+	function getImage(object) {
+		// returns user image
+		return hashTable[object.accountId].image;
 	}
 
 	function requestNearbyRumbles(object) {	
