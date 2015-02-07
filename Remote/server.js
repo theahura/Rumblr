@@ -170,10 +170,10 @@ io.sockets.on('connection', function(socket)
 		longitude = Math.abs(hashTable[object.accountId].coordinates[1]);
 		nearestGamersList = []
 		for (var index in hashTable) {
-			if (latitude-object.latRange  <= hashTable[index].coordinates[0] 
-				&& hashTable[index].coordinates[0] <= latitude+object.latRange
-				&& longitude-object.longRange <= hashTable[index].coordinates[1]
-				&& hashTable[index].coordinates[1] <= longitude+object.longRange
+			if (latitude-object.latRange  <= Math.abs(hashTable[index].coordinates[0]) 
+				&& Math.abs(hashTable[index].coordinates[0]) <= latitude+object.latRange
+				&& longitude-object.longRange <= Math.abs(hashTable[index].coordinates[1])
+				&& Math.abs(hashTable[index].coordinates[1]) <= longitude+object.longRange
 				&& index 
 				!= object.accountId) {
 				nearestGamersList.push(hashTable[index])
