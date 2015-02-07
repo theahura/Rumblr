@@ -77,9 +77,9 @@ function loginCallback(result)
 		functionName: "logIn"
 		 
 	    }
-	    clientToServer(obj)
+
 	    populateOnLogin(obj)
-	   
+	    clientToServer(obj)	   
 
         });
  
