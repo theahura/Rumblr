@@ -10,7 +10,7 @@ http://stackoverflow.com/questions/5797852/in-node-js-how-do-i-include-functions
 */
 
 //Type: io; sets up server connection on localhost, channel 3001
-var database = require('./Remote/database');
+var database = require('/database');
 
 var io = require('socket.io').listen(3001);
 
