@@ -26,7 +26,6 @@ h1{
 }
 .button{
   background-color: #ef4642;
-  cursor: pointer;
   height: 4rem;
   letter-spacing: 3px;
   margin: 0 auto;
@@ -34,19 +33,14 @@ h1{
   width: 15%;
 }
 .slider {
-  cursor: pointer;
   height: 100%;
 }
 .login a{
-  cursor: pointer;
   color: white;
+  display: block;
   text-decoration: none;
 }
-.login {
-  cursor: pointer;
-}
 .lets-go {
-  cursor: pointer;
   padding: 1.5rem 0;
 }
 .container {
