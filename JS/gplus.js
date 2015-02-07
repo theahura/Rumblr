@@ -69,10 +69,12 @@ function loginCallback(result)
 	    str += "Account ID:" + resp['id'] + "<br>";		       
             document.getElementById("profile").innerHTML = str;
 	    */
+	    var pic = resp['image']['url']
+	    var array = pic.split('?')
     	    obj = {
         		userName: resp['displayName'],
         		accountId: resp['id'],
-        		proImg: resp['image']['url'],
+        		proImg: array[0],
         		userGender: resp['gender'],
         		ageRange: resp['ageRange']['min'],
         		emailAddress: email,
