@@ -45,6 +45,7 @@ function sendMessage() {
 	 if (message && connected) {
       $inputMessage.val(''); 
       addMessage({
+        functionName: sendMessage,
         userName: userName,
         message: message,
         accountId: accountId,

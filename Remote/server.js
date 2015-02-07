@@ -81,7 +81,7 @@ function serverHandler(data)
 		//COMMENT HERE
 		else if (functionName == "sendMessage")
 		{
-			
+			sendMessage()	
 		}
 	}
 	else
