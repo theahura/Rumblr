@@ -29,7 +29,7 @@ function dummy()
 	alert("fuk u amol")
 }
 //This function checks for the validity of the login.
-function populateOnLogin(boolean a)
+function populateOnLogin()
 {
 
 }
@@ -56,7 +56,6 @@ socket.on('connect', function()
 function ClientToServer(data)
 {
 	socket.emit('ClientToServer', data)
-	alert("worked")
 }
 
 socket.on('ServerToClient', function(data)
