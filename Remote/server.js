@@ -44,128 +44,128 @@ io.sockets.on('connection', function(socket)
 		socket.emit("serverToClient", data);
 	}
 
+	/*
+		This function takes in data from the socket.io and passes it along to the right locations
+		@param: data; type: object; the data that is passed from the socket.io
+			data.functionName
+		@return: boolean showing whether or not the function worked
+	*/
+	function serverHandler(data)
+	{
+		console.log(data);
+
+		if(data.functionName)
+		{
+			var functionName = data.functionName;
+
+			//sends data to login function
+			//data includes: google account id, username
+
+			if(functionName == "checkUserRegistration")
+			{
+				checkUserRegistration(data);
+			}
+			//Updates the users geolocation to the database
+			//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
+			else if(functionName == "storeGeolocation")
+			{
+				storeGeoLocation(data);
+			}
+			//Updates the chat messages from one user to another to the database
+			//data includes: user name 1, user name 2, message content 
+			else if (functionName == "updateMessages")
+			{
+				//updateMessages(data);
+			}
+			//COMMENT HERE
+			else if (functionName == "requestNearbyRumbles")
+			{
+				requestNearbyRumbles(data);
+			}
+			console.log(hashTable);
+			return true;
+		}
+		else
+		{
+			console.log("There was an error: data did not contain functionName");
+			return false;
+		}
+	}
+
+
+
+	function addToHashtable(object) {
+		// Hashtable data elements
+		hashTable[object.accountId] = {};
+		hashTable[object.accountId].username = object.userName;
+		hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
+		hashTable[object.accountId].coordinates = object.coordinates;
+	}
+
+	function checkUserRegistration(object) {
+		// returns True if user is already registered, False if user is new
+		if (hashTable[object.accountId]) {
+			return hashTable[object.accountId];
+		}
+
+		else {
+			addToHashtable(object);
+			return hashTable[object.accountId];
+		}
+	}
+
+	function storeGameChoices(object) {
+		// saves game choices into hashtable
+		hashTable[object.accountId].gameChoices = accountId.gameChoices;
+	}
+
+	function getGameChoices(object) {
+		// returns game choices of user
+		return hashTable[object.accountId].gameChoices;
+	}
+
+	function storeSwipeRightIDs(object) {
+		// saves Swipe Right IDs of user
+		hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
+	}
+
+	function getSwipeRightIDs(object) {
+		// returns Swipe Right IDs of user
+		return hashTable[object.accountId].swipeRightIDs;
+	}
+
+	function storeGeoLocation(object) {
+		// saves latitude and longitude of user
+		hashTable[object.accountId].coordinates = [object.userPositionLatitude,object.userPositionLongitude];
+	}
+
+	function getGeoLocation(object) {
+		// returns latitude and longitude of user
+		accountId = object.accountId;
+		return hashTable[accountId].coordinates;
+	}
+
+	function requestNearbyRumbles(object) {	
+		latitude = hashTable[object.accountId].coordinates[0];
+		longitude = hashTable[object.accountId].coordinates[1];
+		nearestGamersList = []
+		for (var index in hashTable) {
+			if (latitude-object.latRange  <= hashTable[index].coordinates[0] 
+				&& hashTable[index].coordinates[0] <= latitude+object.latRange
+				&& longitude-object.longRange <= hashTable[index].coordinates[1]
+				&& hashTable[index].coordinates[1] <= longitude+object.longRange
+				&& index 
+				!= object.accountId) {
+				nearestGamersList.push(index)
+			}
+		}
+
+		var data = {
+			rumblesList: nearestGamersList,
+			functionName: "getNearbyRumbles"
+		}
+
+		serverToClient(data); 
+	}
+
 });
-
-/*
-	This function takes in data from the socket.io and passes it along to the right locations
-	@param: data; type: object; the data that is passed from the socket.io
-		data.functionName
-	@return: boolean showing whether or not the function worked
-*/
-function serverHandler(data)
-{
-	console.log(data);
-
-	if(data.functionName)
-	{
-		var functionName = data.functionName;
-
-		//sends data to login function
-		//data includes: google account id, username
-
-		if(functionName == "checkUserRegistration")
-		{
-			checkUserRegistration(data);
-		}
-		//Updates the users geolocation to the database
-		//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
-		else if(functionName == "storeGeolocation")
-		{
-			storeGeoLocation(data);
-		}
-		//Updates the chat messages from one user to another to the database
-		//data includes: user name 1, user name 2, message content 
-		else if (functionName == "updateMessages")
-		{
-			//updateMessages(data);
-		}
-		//COMMENT HERE
-		else if (functionName == "requestNearbyRumbles")
-		{
-			requestNearbyRumbles(data);
-		}
-		console.log(hashTable);
-		return true;
-	}
-	else
-	{
-		console.log("There was an error: data did not contain functionName");
-		return false;
-	}
-}
-
-
-
-function addToHashtable(object) {
-	// Hashtable data elements
-	hashTable[object.accountId] = {};
-	hashTable[object.accountId].username = object.userName;
-	hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
-	hashTable[object.accountId].coordinates = object.coordinates;
-}
-
-function checkUserRegistration(object) {
-	// returns True if user is already registered, False if user is new
-	if (hashTable[object.accountId]) {
-		return hashTable[object.accountId];
-	}
-
-	else {
-		addToHashtable(object);
-		return hashTable[object.accountId];
-	}
-}
-
-function storeGameChoices(object) {
-	// saves game choices into hashtable
-	hashTable[object.accountId].gameChoices = accountId.gameChoices;
-}
-
-function getGameChoices(object) {
-	// returns game choices of user
-	return hashTable[object.accountId].gameChoices;
-}
-
-function storeSwipeRightIDs(object) {
-	// saves Swipe Right IDs of user
-	hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
-}
-
-function getSwipeRightIDs(object) {
-	// returns Swipe Right IDs of user
-	return hashTable[object.accountId].swipeRightIDs;
-}
-
-function storeGeoLocation(object) {
-	// saves latitude and longitude of user
-	hashTable[object.accountId].coordinates = [object.userPositionLatitude,object.userPositionLongitude];
-}
-
-function getGeoLocation(object) {
-	// returns latitude and longitude of user
-	accountId = object.accountId;
-	return hashTable[accountId].coordinates;
-}
-
-function requestNearbyRumbles(object) {	
-	latitude = hashTable[object.accountId].coordinates[0];
-	longitude = hashTable[object.accountId].coordinates[1];
-	nearestGamersList = []
-	for (var index in hashTable) {
-		if (latitude-object.latRange <= hashTable[index].coordinates[0] 
-			&& hashTable[index].coordinates[0] <= latitude+object.latRange
-			&& longitude-object.longRange <= hashTable[index].coordinates[1]
-			&& hashTable[index].coordinates[1] <= longitude+object.longRange
-			&& index 
-			!= object.accountId) {
-			nearestGamersList.push(index)
-		}
-	}
-
-	var data = {
-		rumblesList: nearestGamersList,
-		functionName: "getNearbyRumbles"
-	}
-
-	serverToClient(data); 
-}

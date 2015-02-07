@@ -35,6 +35,10 @@ h1{
 .slider {
   height: 100%;
 }
+.login {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
 .login a{
   color: white;
   display: block;
