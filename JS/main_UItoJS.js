@@ -18,8 +18,8 @@ $("#circle-left").click(function()
 });
 $("#circle-right").click(function()
 {
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeIn("slow")
+	$("").fadeOut("slow")
+	$("").fadeIn("slow")
 });
 $("#submitRadius").click(function()
 {
