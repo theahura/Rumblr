@@ -76,6 +76,12 @@ td{
 
 
 
+.spacer-5
+{
+  height: 5%;
+  width: 100%;
+}
+
 .button
 {
   cursor: pointer;
@@ -98,3 +104,44 @@ td{
     color: white;
     margin-top: 20%;
   }
+
+.profileImage
+{
+  background: ;
+}
+
+
+.swipeContainer
+{
+  color: red;
+  width: 100%;
+  height: 100%;
+}
+
+  .swipeContainer li
+  {
+    display: inline-block;
+    width: 33.3%;
+    height: 100%;
+    vertical-align: top;
+  }
+    .newProfile
+    {
+      background: red;
+      width: 100%;
+      height: 100%;
+    }
+
+      .otherUserProfilePicture
+      {
+        background: orange;
+        width: 60%;
+        height: 40%;
+        margin-left: 20%;
+      }
+      
+      .otherUserInfo
+      {
+        color: white;
+        text-align: center;
+      }
