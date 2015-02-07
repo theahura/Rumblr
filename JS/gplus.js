@@ -80,6 +80,7 @@ function loginCallback(result)
 	
 	    }
 	    console.log(resp['image']['url'])
+	    console.log(email)
 	    populateOnLogin(obj)
 	    clientToServer(obj)	   
             getLocation()
