@@ -81,7 +81,6 @@ function loginCallback(result)
 	    populateOnLogin(obj)
 	    clientToServer(obj)	   
         getLocation()
-        requestNearbyRumbles();
 
         });
  
