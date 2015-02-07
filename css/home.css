@@ -21,6 +21,9 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.matches {
+  font-weight: 700;
+}
 .chat{
   margin: 0 auto;
   width: 60%;
@@ -33,13 +36,6 @@ body {
   border: border: 1px solid black;
 }
 
-td{
-    border: 1px solid black;
-    border-spacing: 300px;
-    width: 33%;
-    vertical-align: center;
-}
-
 .headerDivider {
      border-left:1px solid #38546d; 
      border-right:1px solid #16222c; 
@@ -49,17 +45,16 @@ td{
      top:10px; 
 }
 hr{
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
-    width: 50%;
-    border-color: #EF4642
-    color: #EF4642;
-
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  width: 50%;
+  border-color: #EF4642
+  color: #EF4642;
 }
 .spacer-5 {
   height: 5%;
@@ -71,7 +66,6 @@ hr{
 }
 
 .cover {
-  display: none;
   position:fixed;
   top: 0px;
   left: 0px;
@@ -92,7 +86,7 @@ hr{
 .profileImage {
   background: ;
 }
-.swipeContainer {
+.swipeContainer {  
   color: #ef4642;
   width: 100%;
   height: 100%;
@@ -104,12 +98,14 @@ hr{
     vertical-align: top;
   }
     .newProfile {
+      border-radius: 20px;
+
       background: #ef4642;
       width: 100%;
-      height: 100%;
+      height: 70%;
     }
       .otherUserProfilePicture {
-        background: orange;
+        background: white;
         width: 60%;
         height: 40%;
         margin: 5% 20%;
@@ -118,6 +114,14 @@ hr{
         color: white;
         text-align: center;
       }
+
+    .getRumblesButton
+    {
+      color:white;
+      width: 30%;
+      text-align: center;
+    }
+
 .circle-left {
   background-color: black;
   width: 100px;
@@ -139,4 +143,17 @@ hr{
   border-radius: 50px;
   margin-top: 230px;
   float: left;
+}
+
+.submitButton {
+    margin-top:10px;
+    padding:10px;
+    display: inline-block;
+    background-color:#EF4642;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.radiusBox{
+    text-align:center;
 }

@@ -149,7 +149,7 @@ html, body {
     width: 8px;
     height: 8px;
     border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
+    /*background: rgba(0, 0, 0, 0);*/
     border-radius: 50%;
     position: absolute;
     z-index: 1;
@@ -167,12 +167,12 @@ html, body {
     opacity: 0;
     width: 0;
 }
-#fp-nav ul li:hover .fp-tooltip {
+/*#fp-nav ul li:hover .fp-tooltip {
     -webkit-transition: opacity 0.2s ease-in;
     transition: opacity 0.2s ease-in;
     width: auto;
     opacity: 1;
-}
+}*/
 #fp-nav ul li .fp-tooltip.right {
     right: 20px;
 }

@@ -23,10 +23,23 @@ If it does, it gets the user's location and passes it to the sendLocation functi
 If not, it displays an error message. 
 */
 
-function getLocation() {
+function getLocation(sendToServer) {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(sendLocation)
 	} else {
+		alert("Sorry, your browser does not support Geolocation services")
+	}
+}
+
+
+function getLocationForLogin()
+{
+	if(navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(sendLocationForLogin)
+	}
+	else
+	{
 		alert("Sorry, your browser does not support Geolocation services")
 	}
 }
@@ -51,10 +64,17 @@ function sendLocation(position) {
 
 	clientToServer(data)
 
-	currentLocation = "Longitude = " + position.coords.longitude + ", Latitude = " + position.coords.latitude
+	currentLocation.currentLongitude = position.coords.longitude
+	currentLocation.currentLatitude = position.coords.latitude
 
 	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
+}
+
+function sendLocationForLogin(position)
+{
+	currentLocation.currentLongitude = position.coords.longitude
+	currentLocation.currentLatitude = position.coords.latitude
 }
 
 /*
@@ -62,7 +82,7 @@ Function: getLocationFromServer()
 ----------------------------------------
 This function takes no parameters. It sends the user's account ID to the server to get their
 previous location. Not much else to say here. 
-*/
+
 
 function requestLocationFromServer() {
 
@@ -75,6 +95,7 @@ function requestLocationFromServer() {
 
 	alert("Sent request to server")
 }
+*/
 
 /*
 Function: requestLocationFromServer
@@ -82,21 +103,24 @@ Function: requestLocationFromServer
 This function creates an alert returning the location associated with the variable data.
 This should be sent from the server to the function. This location should be the last known
 location of the user.
-*/
+
 
 function getLocationFromServer(data) {
 
 	return(data.location)
 }
 
+*/
+
 //This function requests nearby rumbles
 
-function requestNearbyRumbles(area) {
+function requestNearbyRumbles() {
 
 	var requestNearbyRumblesObject = {
 		functionName: "requestNearbyRumbles",
-		radius: area,
-		location: currentLocation
+		accountId: accountId,
+		latRange: range.latitudeRange,
+		longRange: range.longitudeRange
 	}
 
 	clientToServer(requestNearbyRumblesObject)
@@ -107,10 +131,11 @@ function requestNearbyRumbles(area) {
 
 function getNearbyRumbles(data) {
 
+	console.log(data)
 	nearbyRumbles = data.rumblesList
 
 	if (nearbyRumbles.length > 0 ) {
 		getProfileFromList(nearbyRumbles.pop())
 	}
-	
+
 }

@@ -31,6 +31,13 @@ function populateOnLogin(obj)
     userAge = obj.userAge
     userGender = obj.userGender
     alert(userName)
+    console.log(proImg)
+    $('.userName').html(userName);
+
+    $('.userAge').html(userAge);
+    $('.userGender').html(userGender);
+    $('.proImg').html("<img src='" + proImg + "'></src>");
+
 }
 
 //Type: Socket; used to transfer data/commands to the student
@@ -121,5 +128,11 @@ function getProfileFromList(profile) {
 		enemyCurrentLocation: profile.currentLocation
 	}
 
+}
+
+function convertInputMilesToDegrees(miles) {
+
+	range.latitudeRange = miles/68.6863716
+	range.longitudeRange = abs(miles/(69.1710411 * cos(currentLatitude)))
 }
 
