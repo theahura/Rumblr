@@ -11,4 +11,4 @@ var userAge
 var userGender
 var currentLocation
 var competitionSettings
-var nearbyRumblers
+var nearbyRumbles

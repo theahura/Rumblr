@@ -90,21 +90,21 @@ function getLocationFromServer(data) {
 
 //This function requests nearby rumbles
 
-function requestNearbyRumblers(area) {
+function requestNearbyRumbles(area) {
 
-	var nearbyRumblers = {
-		functionName: "requestNearbyRumblers",
+	var nearbyRumbles = {
+		functionName: "requestNearbyRumbles",
 		radius: area,
 		location: currentLocation
 	}
 
-	clientToServer(nearbyRumblers)
+	clientToServer(nearbyRumbles)
 
 }
 
 //This function returns nearby rumbles
 
-function getNearbyRumblers(rumblers) {
+function getNearbyRumblers(rumbles) {
 
-	nearbyRumblers = rumblers
+	nearbyRumbles = rumbles
 }
