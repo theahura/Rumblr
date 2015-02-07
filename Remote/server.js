@@ -59,13 +59,13 @@ function serverHandler(data)
 		//data includes: google account id, username
 		if(functionName == "logIn")
 		{
-			login(data);
+			logIn(data);
 		}
 		//Updates the users geolocation to the database
 		//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
 		else if(functionName == "storeGeolocation")
 		{
-			database.storeGeoLocation(data);
+			database.storeGeolocation(data);
 		}
 		//Updates the chat messages from one user to another to the database
 		//data includes: user name 1, user name 2, message content 
