@@ -76,9 +76,9 @@ socket.on('serverToClient', function(data)
 		* receiveNewChatMessage
 		* data should contain: message sender's userName
 		*/
-		else if (functionName == "receiveNewMessage")
+		else if (functionName == "receiveMessage")
 		{
-			receiveNewMessage(data)
+			receiveMessage(data)
 		}
 		else if(functionName == "")
 		{

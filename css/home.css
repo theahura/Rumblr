@@ -1,5 +1,5 @@
 body {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   color: #EF4642;
 }
 .top-nav {
@@ -42,7 +42,7 @@ ul {
   font-style: normal;
   text-align: center;
 }
-.profileImage {
+.proImg {
   background: url() no-repeat;
   float: right;
   height: 8rem;
@@ -66,4 +66,38 @@ ul {
 td{
     border: 1px solid black;
     border-spacing: 300px;
+    width: 33%;
+    vertical-align: center;
 }
+
+.headerDivider {
+     border-left:1px solid #38546d; 
+     border-right:1px solid #16222c; 
+     height:80px;
+     position:absolute;
+     right:249px;
+     top:10px; 
+}
+
+.button
+{
+  cursor: pointer;
+}
+
+.cover
+{
+   position:fixed;
+    top:0px;
+    left:0px;
+    z-index: 5;
+    width:100%;
+    height:100%;
+    background-color:rgba(200,200,200,.5);
+    text-align: center;
+}
+
+  .logInButton
+  {
+    color: white;
+    margin-top: 20%;
+  }

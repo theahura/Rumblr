@@ -10,7 +10,7 @@ http://stackoverflow.com/questions/5797852/in-node-js-how-do-i-include-functions
 */
 
 //Type: io; sets up server connection on localhost, channel 3001
-var database = require('./Remote/database');
+var database = require('./database.js');
 
 var io = require('socket.io').listen(3001);
 
@@ -20,13 +20,20 @@ io.sockets.on('connection', function(socket)
 
 	socket.on('clientToServer', function(data)
 	{
-		if (serverHandler(data) == false)
+		if (serverHandler(data))
+		{
+			
+		}
+		else
 		{
 			console.log("There was an error with the server handler");
 			return false;
 		}
 	});
-
+	socket.on('sendMessage', function(data))
+	{
+		
+	}
 
 	/*
 		This function takes in data from the server remote files and passes it along to the client
@@ -57,9 +64,10 @@ function serverHandler(data)
 
 		//sends data to login function
 		//data includes: google account id, username
-		if(functionName == "login")
+
+		if(functionName == "checkUserRegistration")
 		{
-			login(data);
+			checkUserRegistration(data);
 		}
 		//Updates the users geolocation to the database
 		//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
@@ -72,6 +80,11 @@ function serverHandler(data)
 		else if (functionName == "updateMessages")
 		{
 			updateMessages(data);
+		}
+		//COMMENT HERE
+		else if (functionName == "sendMessage")
+		{
+			sendMessage()	
 		}
 	}
 	else
