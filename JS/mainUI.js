@@ -82,6 +82,8 @@ function generateDivOnMatch(isMatch)
 	if(isMatch == true){
 		var div = document.createElement("div");
 		div.insertAfter(".matches");
+		return true;
+	return false;
 	}
 }
 	
