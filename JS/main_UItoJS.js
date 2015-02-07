@@ -73,3 +73,14 @@ $(".refresh").click(function()
 // $(.userAge).html(userAge);
 // $(.userGender).html(userGender);
 // $(.currentLocation).html(currentLocation);
+
+
+
+function createPersonList()
+{
+	var $EventObj = $("#People_Template").clone();
+
+	$EventObj.attr("id","");
+
+	$(".peopleList").append($EventObj);
+}
