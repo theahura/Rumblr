@@ -174,3 +174,17 @@ hr{
   width: 50%;
   height: 5%;
 }
+
+
+.peopleListContainer
+{
+  width: 100%;
+  height: 100%;
+  color: red;
+}
+
+.peopleList
+{
+  width: 100%;
+  height: 100%;
+}
