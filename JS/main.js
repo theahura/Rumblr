@@ -33,6 +33,10 @@ function populateOnLogin(obj)
     alert(userName)
 }
 
+$(.userName).html(userName);
+$(.userAge).html(userAge);
+$(.userGender).html(userGender);
+
 //Type: Socket; used to transfer data/commands to the student
 socket = io('http://54.86.173.127:3001');
 
