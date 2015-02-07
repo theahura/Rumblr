@@ -23,7 +23,6 @@ Functions: T
 
 */
 
-var userName = "Amol F. DickButt"
 function dummy()
 {
 	alert("fuk u amol")
