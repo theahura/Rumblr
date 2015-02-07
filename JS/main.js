@@ -15,7 +15,7 @@ Functions: T
 
 	toServerHandler - the generic handler that all functions use to send info to the server
 
-	fromServerHandler - the generic handler that all functions use to recieve info from the server
+	fromServerHandler - the generic handler that all functions use to receive info from the server
 	
 	updateNotifications - the generic handler for notifications and stuff that happens while the user is away
 
