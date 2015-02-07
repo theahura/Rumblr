@@ -52,6 +52,7 @@ socket.on('connect', function()
 function ClientToServer(data)
 {
 	socket.emit('ClientToServer', data)
+	alert("worked")
 }
 
 socket.on('ServerToClient', function(data)
@@ -70,7 +71,7 @@ socket.on('ServerToClient', function(data)
 		}	
 		/**
 		* receiveNewChatMessage
-		* data should contain: new chat message
+		* data should contain: message author
 		*/
 		else if (functionName == "receiveNewChatMessage")
 		{
