@@ -1,13 +1,13 @@
-$("#getLocation").click(function()
-{
-	alert();
-    getLocation();
-});
-
-// $("#login").click(function()
+// $("#getLocation").click(function()
 // {
-//     login();
-// }
+// 	alert();
+//     getLocation();
+// });
+
+$("#login").click(function()
+{
+     login();
+});
 
 // $("#getLocationFromServer").click(function()
 // {

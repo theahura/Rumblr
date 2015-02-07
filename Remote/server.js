@@ -104,8 +104,6 @@ function addToHashtable(object) {
 	// Hashtable data elements
 	hashTable[object.accountId] = {};
 	hashTable[object.accountId].username = object.username;
-	hashTable[object.accountId].password = object.password;
-	hashTable[object.accountId].gameChoices = object.gameChoices;
 	hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
 	hashTable[object.accountId].coordinates = object.coordinates;
 }
