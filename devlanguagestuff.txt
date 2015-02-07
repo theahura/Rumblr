@@ -1,0 +1,16 @@
+CLIENT ID 910432959217-ll9jmpv115of2s9rb55c4kof6lckd42p.apps.googleusercontent.com 
+EMAIL ADDRESS  910432959217-ll9jmpv115of2s9rb55c4kof6lckd42p@developer.gserviceaccount.com  
+CLIENT SECRET  3j4-t9EPWlmjTHYtuop5IViD  REDIRECT URIS  
+http://rumblr.diagraphictech.com/oauth2callback
+ JAVASCRIPT ORIGINS 
+http://rumblr.diagraphictech.com
+
+API Key
+AIzaSyASBaefXgtUHhCP8tRGDT1rfXM1Vldt_io
+
+Server Info
+
+host: 54.86.173.127
+user: diagraphic
+pass: diagraphictech
+ssh: none

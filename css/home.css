@@ -1,5 +1,5 @@
 body {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   color: #EF4642;
 }
 .top-nav {
@@ -66,4 +66,6 @@ ul {
 td{
     border: 1px solid black;
     border-spacing: 300px;
+    width: 33%;
+    vertical-align: center;
 }
