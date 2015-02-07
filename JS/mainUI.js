@@ -18,6 +18,8 @@ Functions:
 });
 */
 
+/* initializes fullPage.js */
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
         //Navigation
