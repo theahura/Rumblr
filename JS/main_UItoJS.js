@@ -21,7 +21,14 @@ $(".circle-left").click(function()
 $(".circle-right").click(function()
 {
 	if(enemyProfile)
-		sendEnemyProfile(enemyProfile)
+	{
+		var obj = {
+			enemyProfile: enemyProfile
+			functionName: "storeSwipeRightProfile",
+			accountId: accountId
+		}
+		sendEnemyProfile(obj)
+	}
 
 	$(".newProfile").fadeOut("slow", function(){
 		getProfileFromList(nearbyRumbles.pop())

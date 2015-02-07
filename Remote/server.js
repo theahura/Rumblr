@@ -80,6 +80,10 @@ io.sockets.on('connection', function(socket)
 			{
 				requestNearbyRumbles(data);
 			}
+			else if (functionName == "storeSwipeRightProfile")
+			{
+				storeSwipeRightProfile(data)
+			}
 			console.log(hashTable);
 			return true;
 		}
