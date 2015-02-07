@@ -20,7 +20,11 @@ io.sockets.on('connection', function(socket)
 
 	socket.on('clientToServer', function(data)
 	{
-		if (serverHandler(data) == false)
+		if (serverHandler(data))
+		{
+			
+		}
+		else
 		{
 			console.log("There was an error with the server handler");
 			return false;
@@ -73,6 +77,11 @@ function serverHandler(data)
 		else if (functionName == "updateMessages")
 		{
 			updateMessages(data);
+		}
+		//COMMENT HERE
+		else if (functionName == "sendMessage")
+		{
+			
 		}
 	}
 	else
