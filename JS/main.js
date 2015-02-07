@@ -128,6 +128,15 @@ function getProfileFromList(profile) {
 		enemyUserGender: profile.userGender,
 		enemyUserAge: profile.userAge,
 		enemyCurrentLocation: profile.currentLocation
+
+		$('.enemyUserName').html(enemyUserName);
+		$('.enemyEmailAddress').html(enemyEmailAddress);
+		$('.enemyUserGender').html(enemyUserGender);
+		$('.enemyUserAge').html(enemyUserAge);
+		
+
+
+
 	}
 
 }
