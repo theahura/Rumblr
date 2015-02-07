@@ -115,25 +115,42 @@ socket.on('serverToClient', function(data)
 
 });
 
+function sendEnemyProfile(profile)
+{
+	socket.emit('clientToServer', profile)
+}
 
 //This function returns the profile requested in the previous function
 
 function getProfileFromList(profile) {
 
-	var enemyProfile = {
-		enemyUserName: profile.userName,
+	if (profile)
+	{
+		enemyProfile = {
+		enemyUserName: profile.username,
 	 	enemyAccountId:  profile.accountId,
 		enemyProImg: profile.proImg,
 		enemyEmailAddress: profile.emailAddress,
 		enemyUserGender: profile.userGender,
 		enemyUserAge: profile.userAge,
-		enemyCurrentLocation: profile.currentLocation
+		enemyCurrentLocation: profile.currentLocation	
+		}
 
-		$('.enemyUserName').html(enemyUserName);
-		$('.enemyEmailAddress').html(enemyEmailAddress);
-		$('.enemyUserGender').html(enemyUserGender);
-		$('.enemyUserAge').html(enemyUserAge);
-		
+		$('.otherUserProfilePicture').css('background-image', 'url(' + enemyProfile.enemyProImg + ')');
+		$('.enemyUserName').html(enemyProfile.enemyUserName);
+		$('.enemyEmailAddress').html(enemyProfile.enemyEmailAddress);
+		$('.enemyUserGender').html(enemyProfile.enemyUserGender);
+		$('.enemyUserAge').html(enemyProfile.enemyUserAge);
+	}
+	else
+	{
+		$('.otherUserProfilePicture').css('background-image', 'url(' + ')');
+		$('.enemyUserName').html("All Out");
+		$('.enemyEmailAddress').html("");
+		$('.enemyUserGender').html("");
+		$('.enemyUserAge').html("");
+
+		enemyProfile = null; 
 	}
 
 }
@@ -141,6 +158,6 @@ function getProfileFromList(profile) {
 function convertInputMilesToDegrees(miles) {
 
 	range.latitudeRange = miles/68.6863716
-	range.longitudeRange = Math.abs(miles/(69.1710411 * Math.cos(currentLatitude)))
+	range.longitudeRange = Math.abs(miles/(69.1710411 * Math.cos(currentLocation.currentLatitude)))
 }
 

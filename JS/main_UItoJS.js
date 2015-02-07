@@ -11,17 +11,30 @@ $("#login").click(function()
 
 $(".circle-left").click(function()
 {
-	$(".newProfile").fadeOut()
-	$(".newProfile").fadeIn()
+	$(".newProfile").fadeOut("slow", function(){
+		getProfileFromList(nearbyRumbles.pop())
+	})
 
+	$(".newProfile").fadeIn()
 });
 
 $(".circle-right").click(function()
 {
-	$(".newProfile").fadeOut()
+	if(enemyProfile)
+	{
+		var obj = {
+			enemyProfile: enemyProfile,
+			functionName: "storeSwipeRightProfile",
+			accountId: accountId
+		}
+		sendEnemyProfile(obj)
+	}
+
+	$(".newProfile").fadeOut("slow", function(){
+		getProfileFromList(nearbyRumbles.pop())
+	})
 	$(".newProfile").fadeIn()
 });
-
 
 $("#submitRadius").click(function()
 {
