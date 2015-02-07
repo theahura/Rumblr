@@ -38,8 +38,8 @@ $(document).ready(function() {
         scrollBar: false,
         easing: 'easeInQuart',
         easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
+        loopBottom: true,
+        loopTop: true,
         loopHorizontal: true,
         continuousVertical: false,
         normalScrollElements: '#element1, .element2',
@@ -83,6 +83,7 @@ function generateDivOnMatch(isMatch)
 		var div = document.createElement("div");
 		$(div).insertAfter(".matches");
 		$(div).addClass("matches");
+
 	}
 }
 	
