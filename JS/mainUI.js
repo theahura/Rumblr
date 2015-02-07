@@ -78,4 +78,3 @@ $('.button').mouseover(function() {
     $(this).removeClass('animated bounceInLeft');
     });
 });
-

@@ -92,26 +92,28 @@ socket.on('serverToClient', function(data)
 	}
 
 });
-<<<<<<< HEAD
+
+//This function requests the matched user's profile from the server
 
 function requestProfileFromServer() {
 
 	var profile = {
-		functionName: "requestProfileFromServer"
-		accountId: null
-		userAge: null
-		userGender: null
-		proImg: null
+		functionName: "requestProfileFromServer",
+		accountId: null,
+		userAge: null,
+		userGender: null,
+		proImg: null,
+		currentLocation: null
 	}
 	
 	clientToServer(profile)
 
 }
 
+//This function returns the profile requested in the previous function
+
 function getProfileFromServer(profile) {
 
 	return profile
 }
 
-=======
->>>>>>> origin/master

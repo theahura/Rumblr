@@ -45,11 +45,12 @@ function sendMessage() {
 	 if (message && connected) {
       $inputMessage.val(''); 
       addMessage({
+        functionName: sendMessage,
         userName: userName,
         message: message,
         accountId: accountId,
       });
-      socket.emit('clientToServer', message); // tells server to execute 'new message'
+      socket.emit('sendMessage', message); // tells server to execute 'new message'
   }
 }
 

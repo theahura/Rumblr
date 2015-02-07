@@ -1,33 +1,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="Content-Type" content="width=device-width" charset="UTF-8" />
-        <title>Rumblr</title>
+      <meta http-equiv="Content-Type" content="width=device-width" charset="UTF-8" />
+      <title>Rumblr</title>
 
-        <!-- latest jQuery direct from google's CDN -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-    </script>
+      <!-- latest jQuery direct from google's CDN -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+      </script>
 
-        <!--main CSS stylesheet for page -->
-    <link rel="stylesheet" type="text/css" href="css/mainUI.css">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts.css">
-    <link href='http://fonts.googleapis.com/css?family=Chivo:400,900,900italic,400italic' rel='stylesheet' type='text/css'>
+          <!--main CSS stylesheet for page -->
+      <link rel="stylesheet" type="text/css" href="css/mainUI.css">
+      <link rel="stylesheet" type="text/css" href="css/home.css">
+      <link rel="stylesheet" type="text/css" href="css/fonts.css">
+      <link href='http://fonts.googleapis.com/css?family=Chivo:400,900,900italic,400italic' rel='stylesheet' type='text/css'>
 
-    <!--Google Plus API-->
-    <script src="https://apis.google.com/js/client:platform.js" async defer>
-    </script>
+      <!--Google Plus API-->
+      <script src="https://apis.google.com/js/client:platform.js" async defer>
+      </script>
 
-        <!--fullPage.js -->
-        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+      <!--fullPage.js -->
+      <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+      <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
     </head>
     
     <body>
 
       <div class="cover">
-          <div class="button logInButton" id="login"> Log In </div> 
+          <div class="button logInButton" id="login">Log In</div> 
       </div>
       
       <ul class="top-nav dropdown" id="menu">
@@ -59,7 +59,7 @@
                   <h2 style="text-align:center">Rumbles</h2>
                   <p>
                     No Rumbles to display.
-                  </p> 
+                  </p>
                 </div>
               </div>
             </div>
@@ -91,7 +91,6 @@
               <li>
               </li>
             </ul>
-
           </div>
           <div class="slide">
             <h1> User Profile </h1>
@@ -99,10 +98,15 @@
             <div class="container">
               <div class="grid">
                 <div class="unit one-of-three">
-                  <div class="profileImage"></div>
+                  <div class="proImg"></div>
                 </div>
                 <div class="unit two-of-three">
-                  <h2>Username&#8217;s Profile</h2>
+                  <div class="userName"><h2>Username&#8217;s Profile</h2></div>
+                  <p><strong>Age:</strong><span class="userAge"></span></p>
+                  <p><strong>Gender:</strong><span class="userGender"></span></p>
+                  <p><strong>Current Location:</strong><span class="currentLocation"></span></p>
+                  <p>"Please Input Your Search Radius"</p>
+                  <input type="text" id="userProx"><br> 
                 </div>
               </div>
             </div>

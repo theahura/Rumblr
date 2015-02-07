@@ -42,7 +42,7 @@ ul {
   font-style: normal;
   text-align: center;
 }
-.profileImage {
+.proImg {
   background: url() no-repeat;
   float: right;
   height: 8rem;
@@ -70,11 +70,14 @@ td{
     vertical-align: center;
 }
 
-
-
-
-
-
+.headerDivider {
+     border-left:1px solid #38546d; 
+     border-right:1px solid #16222c; 
+     height:80px;
+     position:absolute;
+     right:249px;
+     top:10px; 
+}
 
 .spacer-5
 {
