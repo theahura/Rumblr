@@ -86,7 +86,22 @@ function generateDivOnMatch(isMatch)
 
 	}
 }
-	
+
+function generateContactOnMatch(userProfile)
+{
+        var div = document.createElement("li");
+        $(div).insertAfter(".peopleList");
+        $(div).addClass("contact");
+
+        userName = userProfile.userName;
+        userEmail = userProfile.emailAddress;
+
+
+        $('.contact').html(userName);
+        $('.contact').html(userEmail);
+
+
+}	
 
 $('.button').mouseover(function() {
   $('.fist-icon').addClass('animated bounceInLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function() {
