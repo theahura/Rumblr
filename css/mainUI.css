@@ -21,6 +21,7 @@ h1{
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
+  font-family: 'CooperHewitt', 'Chivo', sans-serif;
 }
 .button{
   background-color: #ef4642;
@@ -57,8 +58,8 @@ h1{
 }
 
 .section{
-  h1{
-   text-align: center; 
+   text-align: center;
+   font-family: 'CooperHewitt', 'Chivo', sans-serif;
   }
   
 footer {
