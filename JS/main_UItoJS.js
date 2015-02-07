@@ -23,7 +23,7 @@ $(".circle-right").click(function()
 	if(enemyProfile)
 	{
 		var obj = {
-			enemyProfile: enemyProfile
+			enemyProfile: enemyProfile,
 			functionName: "storeSwipeRightProfile",
 			accountId: accountId
 		}
