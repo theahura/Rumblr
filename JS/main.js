@@ -23,6 +23,11 @@ Functions: T
 
 */
 
+var userName = "Amol F. DickButt"
+function dummy()
+{
+	alert("fuk u amol")
+}
 //This function checks for the validity of the login.
 function populateOnLogin(boolean a)
 {
@@ -48,7 +53,6 @@ socket.on('connect', function()
 /**
 * 
 */
-userName = "DickButt"
 function ClientToServer(data)
 {
 	socket.emit('ClientToServer', data)
