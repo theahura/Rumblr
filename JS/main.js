@@ -145,6 +145,8 @@ function getProfileFromList(profile) {
 		$('.enemyEmailAddress').html("");
 		$('.enemyUserGender').html("");
 		$('.enemyUserAge').html("");
+
+		enemyProfile = null; 
 	}
 
 }

@@ -11,7 +11,7 @@ $("#login").click(function()
 
 $(".circle-left").click(function()
 {
-	$(".newProfile").fadeOut("400", function(){
+	$(".newProfile").fadeOut("slow", function(){
 		getProfileFromList(nearbyRumbles.pop())
 	})
 
@@ -20,8 +20,12 @@ $(".circle-left").click(function()
 
 $(".circle-right").click(function()
 {
-	$(".newProfile").fadeOut()
-	getProfileFromList(nearbyRumbles.pop())
+	if(enemyProfile)
+		sendEnemyProfile(enemyProfile)
+
+	$(".newProfile").fadeOut("slow", function(){
+		getProfileFromList(nearbyRumbles.pop())
+	})
 	$(".newProfile").fadeIn()
 });
 
