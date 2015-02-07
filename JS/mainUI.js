@@ -18,6 +18,8 @@ Functions:
 });
 */
 
+/* initializes fullPage.js */
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
         //Navigation
@@ -72,6 +74,19 @@ $(document).ready(function() {
         onSlideLeave: function(anchorLink, index, slideIndex, direction){}
     });
 });
+
+
+//generates a div in the People section of Rumbles
+function generateDivOnMatch(isMatch)
+{
+	if(isMatch == true){
+		var div = document.createElement("div");
+		div.insertAfter(".matches");
+		return true;
+	return false;
+	}
+}
+	
 
 $('.button').mouseover(function() {
   $('.fist-icon').addClass('animated bounceInLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function() {
