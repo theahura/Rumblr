@@ -50,7 +50,7 @@ function sendMessage() {
         message: message,
         accountId: accountId,
       });
-      socket.emit('clientToServer', message); // tells server to execute 'new message'
+      socket.emit('sendMessage', message); // tells server to execute 'new message'
   }
 }
 

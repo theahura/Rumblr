@@ -30,7 +30,10 @@ io.sockets.on('connection', function(socket)
 			return false;
 		}
 	});
-
+	socket.on('sendMessage', function(data))
+	{
+		
+	}
 
 	/*
 		This function takes in data from the server remote files and passes it along to the client
