@@ -38,21 +38,18 @@ ul {
   text-decoration: none;
 }
 .section h1 {
-   font-style: normal;
-   text-align: center;
-<<<<<<< Updated upstream
-  }
+  font-style: normal;
+  text-align: center;
+}
 .profileImage {
   background: url() no-repeat;
+  float: right;
   height: 8rem;
   width: 8rem;
   border-radius: 4rem;
   -webkit-border-radius: 4rem;
   -moz-border-radius: 4rem;
 }
-=======
-   vertical-align: text-top;
-  }
 .chat{
   margin: 0 auto;
   width: 60%;
@@ -69,4 +66,3 @@ td{
     border: 1px solid black;
     border-spacing: 300px;
 }
->>>>>>> Stashed changes
