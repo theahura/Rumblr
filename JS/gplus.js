@@ -72,7 +72,6 @@ function loginCallback(result)
 		userName: resp['displayName'],
 		accountId: resp['id'],
 		proImage: resp['image']['url'],
-		userAge: resp['ageRange']['min'],
 		userGender: resp['gender'],
 		functionName: "checkUserRegistration"
 		 
