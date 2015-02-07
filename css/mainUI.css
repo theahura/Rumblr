@@ -26,6 +26,7 @@ h1{
 }
 .button{
   background-color: #ef4642;
+  cursor: pointer;
   height: 4rem;
   letter-spacing: 3px;
   margin: 0 auto;
@@ -33,17 +34,20 @@ h1{
   width: 15%;
 }
 .slider {
+  cursor: pointer;
   height: 100%;
 }
-.lets-go a{
-  text-decoration: none;
+.login a{
+  cursor: pointer;
   color: white;
+  text-decoration: none;
 }
-.fist-icon {
-  background: url('../img/fist.svg');
-  float: left;
-  height: 62px;
-  width: 66px;
+.login {
+  cursor: pointer;
+}
+.lets-go {
+  cursor: pointer;
+  padding: 1.5rem 0;
 }
 .container {
   margin: 0 auto;
