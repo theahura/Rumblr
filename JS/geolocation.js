@@ -52,7 +52,7 @@ function sendLocation(position) {
 	clientToServer(data)
 
 	currentLocation.currentLongitude = position.coords.longitude
-	currentLocation.currentLatitude = posiition.coords.latitude
+	currentLocation.currentLatitude = position.coords.latitude
 
 	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
@@ -95,7 +95,7 @@ function getLocationFromServer(data) {
 
 //This function requests nearby rumbles
 
-function requestNearbyRumbles(range) {
+function requestNearbyRumbles() {
 
 	var requestNearbyRumblesObject = {
 		functionName: "requestNearbyRumbles",
