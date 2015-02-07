@@ -79,12 +79,3 @@ $('.button').mouseover(function() {
     });
 });
 
-
-
-
-
-
-$("#logIn").click(function()
-{
-    logIn();
-});
