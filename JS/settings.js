@@ -11,4 +11,4 @@ var userGender
 var userAge
 var currentLocation
 var competitionSettings
-var nearbyRumbles
+var nearbyRumbles = {}

@@ -107,21 +107,10 @@ socket.on('serverToClient', function(data)
 
 });
 
-//This function requests the matched user's profile from the server
-
-function requestProfileFromServer() {
-
-	var profile = {
-		functionName: "requestProfileFromServer"
-	}
-	
-	clientToServer(profile)
-
-}
 
 //This function returns the profile requested in the previous function
 
-function getProfileFromServer(profile) {
+function getProfileFromList(profile) {
 
 	var enemyProfile = {
 		enemyUserName: profile.userName,

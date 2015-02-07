@@ -51,6 +51,8 @@ function sendLocation(position) {
 
 	clientToServer(data)
 
+	currentLocation = "Longitude = " + position.coords.longitude + ", Latitude = " + position.coords.latitude
+
 	alert("Longitude = " + position.coords.longitude + " and Latitude = " + position.coords.latitude);
 	
 }
@@ -103,7 +105,12 @@ function requestNearbyRumbles(area) {
 
 //This function returns nearby rumbles
 
-function getNearbyRumblers(rumbles) {
+function getNearbyRumbles(data) {
 
-	nearbyRumbles = rumbles
+	nearbyRumbles = data.rumblesList
+
+	if (nearbyRumbles.length > 0 ) {
+		getProfileFromList(nearbyRumbles.pop())
+	}
+	
 }
