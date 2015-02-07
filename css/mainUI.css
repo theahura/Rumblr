@@ -35,15 +35,13 @@ h1{
 .slider {
   height: 100%;
 }
-.lets-go a{
-  text-decoration: none;
+.login a{
   color: white;
+  display: block;
+  text-decoration: none;
 }
-.fist-icon {
-  background: url('../img/fist.svg');
-  float: left;
-  height: 62px;
-  width: 66px;
+.lets-go {
+  padding: 1.5rem 0;
 }
 .container {
   margin: 0 auto;
