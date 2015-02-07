@@ -66,6 +66,7 @@ hr{
 }
 
 .cover {
+  display: none;
   position:fixed;
   top: 0px;
   left: 0px;
@@ -123,26 +124,19 @@ hr{
     }
 
 .circle-left {
-  background-color: black;
+  background: url(../img/bandaids.svg);
+  cursor: pointer;
   width: 100px;
   height: 100px;
-  padding-top: 15px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  margin-top: 230px;
+  top: 30%;
   float: right;
 }
 .circle-right {
-  background-color: black;
+  background: url(../img/fist.svg);
+  cursor: pointer;
   width: 100px;
   height: 100px;
-  padding-top: 15px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  margin-top: 230px;
-  float: left;
+  top: 30%;
 }
 
 .submitButton {

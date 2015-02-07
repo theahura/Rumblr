@@ -48,7 +48,7 @@ function loginCallback(result)
         });
         request.execute(function (resp)
         {
-          /*  var email = '';
+            var email = '';
             if(resp['emails'])
             {
                 for(i = 0; i < resp['emails'].length; i++)
@@ -59,7 +59,7 @@ function loginCallback(result)
                     }
                 }
             }
- 
+	    /*
             var str = "Name:" + resp['displayName'] + "<br>";
             str += "Image:" + resp['image']['url'] + "<br>";
             str += "<img src='" + resp['image']['url'] + "' /><br>";
@@ -68,19 +68,21 @@ function loginCallback(result)
             str += "Email:" + email + "<br>";
 	    str += "Account ID:" + resp['id'] + "<br>";		       
             document.getElementById("profile").innerHTML = str;
-	  */
+	    */
 	    obj = {
 		userName: resp['displayName'],
 		accountId: resp['id'],
 		proImage: resp['image']['url'],
 		userGender: resp['gender'],
+		ageRange: resp['ageRange']['min'],
+		emailAddress: email,
 		functionName: "checkUserRegistration"
-		 
+	
 	    }
-
+	    console.log(resp['image']['url'])
 	    populateOnLogin(obj)
 	    clientToServer(obj)	   
-        getLocation()
+            getLocation()
         });
  
     }
