@@ -67,3 +67,32 @@ td{
     border: 1px solid black;
     border-spacing: 300px;
 }
+
+
+
+
+
+
+
+.button
+{
+  cursor: pointer;
+}
+
+.cover
+{
+   position:fixed;
+    top:0px;
+    left:0px;
+    z-index: 5;
+    width:100%;
+    height:100%;
+    background-color:rgba(200,200,200,.5);
+    text-align: center;
+}
+
+  .logInButton
+  {
+    color: white;
+    margin-top: 20%;
+  }
