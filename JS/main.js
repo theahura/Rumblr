@@ -69,11 +69,16 @@ socket.on('ServerToClient', function(data)
 			populateOnLogin(data)
 		}	
 		/**
+		* receiveNewChatMessage
 		* data should contain: new chat message
 		*/
 		else if (functionName == "receiveNewChatMessage")
 		{
 			receiveNewChatMessage(data)
+		}
+		else if(functionName == "")
+		{
+			
 		}
 	}
 	else
