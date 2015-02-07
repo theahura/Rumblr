@@ -117,8 +117,8 @@ socket.on('serverToClient', function(data)
 
 function sendEnemyProfile(profile)
 {
-	profile.functionName = storeSwipeRightProfile
-	profile.accountId = accountId
+	profile.functionName = 'storeSwipeRightProfile'
+	profile.accountId = 'accountId'
 	socket.emit('clientToServer', profile)
 }
 
