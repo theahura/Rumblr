@@ -30,10 +30,12 @@ function populateOnLogin(obj)
     proImg = obj.proImg
     userAge = obj.userAge
     userGender = obj.userGender
+    emailAddress = obj.emailAddress
     alert(userName)
     $('.userName').html(userName);
 	$('.userAge').html(userAge);
 	$('.userGender').html(userGender);
+	$('.emailAddress').html(emailAddress);
 }
 
 //Type: Socket; used to transfer data/commands to the student
@@ -119,6 +121,7 @@ function getProfileFromList(profile) {
 		enemyUserName: profile.userName,
 	 	enemyAccountId:  profile.accountId,
 		enemyProImg: profile.proImg,
+		enemyEmailAddress: profile.emailAddress,
 		enemyUserGender: profile.userGender,
 		enemyUserAge: profile.userAge,
 		enemyCurrentLocation: profile.currentLocation
