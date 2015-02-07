@@ -97,6 +97,8 @@ io.sockets.on('connection', function(socket)
 	function addToHashtable(object) {
 		// Hashtable data elements
 		hashTable[object.accountId] = {};
+		hashTable[object.accountId].proPic = object.proPic;
+		hashTable[object.accountId].accountId = object.accountId;
 		hashTable[object.accountId].username = object.userName;
 		hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
 		hashTable[object.accountId].coordinates = object.coordinates;
@@ -156,7 +158,7 @@ io.sockets.on('connection', function(socket)
 				&& hashTable[index].coordinates[1] <= longitude+object.longRange
 				&& index 
 				!= object.accountId) {
-				nearestGamersList.push(index)
+				nearestGamersList.push(hashTable[index])
 			}
 		}
 
