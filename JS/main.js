@@ -31,7 +31,6 @@ function populateOnLogin(obj)
     userAge = obj.userAge
     userGender = obj.userGender
     emailAddress = obj.emailAddress
-    alert(userName)
     console.log(proImg)
     $('.userName').html(userName);
     $('.userAge').html(userAge);
