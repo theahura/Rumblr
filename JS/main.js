@@ -30,7 +30,7 @@ function populateOnLogin(obj)
     proImg = obj.proImg
     userAge = obj.userAge
     userGender = obj.userGender
-    
+    alert(userName)
 }
 
 //Type: Socket; used to transfer data/commands to the student
