@@ -5,53 +5,53 @@
         <title>Rumblr</title>
 
         <!-- latest jQuery direct from google's CDN -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-		</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
 
         <!--main CSS stylesheet for page -->
-		<link rel="stylesheet" href="css/mainUI.css" />
-		<link href='http://fonts.googleapis.com/css?family=Chivo:400,900,900italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/mainUI.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link href='http://fonts.googleapis.com/css?family=Chivo:400,900,900italic,400italic' rel='stylesheet' type='text/css'>
 
-		<!--Google Plus API-->
-		<script src="https://apis.google.com/js/client:platform.js" async defer>
-		</script>
+    <!--Google Plus API-->
+    <script src="https://apis.google.com/js/client:platform.js" async defer>
+    </script>
 
         <!--fullPage.js -->
         <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-        <script type="text/javascript" src="jquery.fullPage.js"></script>
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
     </head>
     
-    <body style = "background-color: #FE642E">
-      <ul id="menu" style="background-color: white">
+    <body>
+      <ul class="top-nav dropdown" id="menu">
         <li><img src="img/Logo.png"; height="4rem"; width="auto"></li>
         <li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
         <li data-menuanchor="secondPage"><a href="#secondPage">Rumbles</a></li>
         <li data-menuanchor="3rdPage"><a href="#3rdPage">Profile</a></li>
-    
       </ul>
 
       <div class="fullpage">
         <div class="section">
           <div class="slide">
-            <h1>HOME</h1>
-          </div>
-          <div class="slide">
             <h1>RUMBLES</h1>
+          </div>
+          <div class="slide active">
+            <h1>HOME</h1>
           </div>
           <div class="slide">
             <h1>PROFILE</h1>
         </div>
       </div>
- 
 
 
+        <!--Links to all other files-->
+      <script type="text/javascript" src="JS/settings.js"></script>
+      <script type="text/javascript" src="JS/gplus.js"></script>
+      <script type="text/javascript" src="JS/main.js"></script>
+      <script type="text/javascript" src="JS/chat.js"></script>
+      <script type="text/javascript" src="JS/geolocation.js"></script>
+      <script type="text/javascript" src="JS/mainUI.js"></script>
 
-    		<!--Links to all other files-->
-		<script type="text/javascript" src="JS/chat.js"></script>
-    	<script type="text/javascript" src="JS/facebook.js"></script>
-	  	<script type="text/javascript" src="JS/geolocation.js"></script>
-		<script type="text/javascript" src="JS/main.js"></script>
-    	<script type="text/javascript" src="JS/mainUI.js"></script>
     </body>
 </html>

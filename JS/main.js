@@ -22,9 +22,8 @@ Functions: T
 	updateLocation() - generic handler for sending the current location to the server, to be called every 10 min or soT
 
 */
-
 //This function checks for the validity of the login.
-function populateOnLogin(boolean a)
+function populateOnLogin()
 {
 
 }
@@ -33,8 +32,8 @@ function populateOnLogin(boolean a)
 socket = io('http://54.86.173.127:3001');
 
 	/**
- * When the socket connects (recieving 'connect' as a command) 
- * it emits it's room choice to the socket.io server, which 
+ * When the socket connects (receiving 'connect' as a command) 
+ * it emits its room choice to the socket.io server, which 
  * then handles room delegation. 
  * 
  * This is done to ensure that multiple teachers only communicate with their own students
@@ -48,11 +47,10 @@ socket.on('connect', function()
 /**
 * 
 */
-
 function ClientToServer(data)
 {
+	console.log(data)
 	socket.emit('ClientToServer', data)
-	alert("worked")
 }
 
 socket.on('ServerToClient', function(data)
