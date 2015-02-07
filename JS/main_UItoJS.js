@@ -11,9 +11,10 @@ $("#login").click(function()
 
 $(".circle-left, .circle-right").click(function()
 {
-	$(".newProfile").fadeOut()
+	$(".newProfile").fadeOut("slow", function(){
+		getProfileFromList(nearbyRumbles.pop())
+	})
 	$(".newProfile").fadeIn()
-	getProfileFromList(nearbyRumbles.pop())
 });
 
 

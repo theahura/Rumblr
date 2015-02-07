@@ -152,5 +152,9 @@ function getNearbyRumbles(data) {
 	if (nearbyRumbles.length > 0 ) {
 		getProfileFromList(nearbyRumbles.pop())
 	}
+	else
+	{
+		getProfileFromList()
+	}
 
 }

@@ -120,7 +120,9 @@ socket.on('serverToClient', function(data)
 
 function getProfileFromList(profile) {
 
-	enemyProfile = {
+	if (profile)
+	{
+		enemyProfile = {
 		enemyUserName: profile.username,
 	 	enemyAccountId:  profile.accountId,
 		enemyProImg: profile.proImg,
@@ -128,16 +130,28 @@ function getProfileFromList(profile) {
 		enemyUserGender: profile.userGender,
 		enemyUserAge: profile.userAge,
 		enemyCurrentLocation: profile.currentLocation	
+		}
+
+		$('.otherUserProfilePicture').css('background-image', 'url(' + enemyProfile.enemyProImg + ')');
+		$('.enemyUserName').html(enemyProfile.enemyUserName);
+		$('.enemyEmailAddress').html(enemyProfile.enemyEmailAddress);
+		$('.enemyUserGender').html(enemyProfile.enemyUserGender);
+		$('.enemyUserAge').html(enemyProfile.enemyUserAge);
 	}
-	$('.enemyUserName').html(enemyProfile.enemyUserName);
-	$('.enemyEmailAddress').html(enemyProfile.enemyEmailAddress);
-	$('.enemyUserGender').html(enemyProfile.enemyUserGender);
-	$('.enemyUserAge').html(enemyProfile.enemyUserAge);
+	else
+	{
+		$('.otherUserProfilePicture').css('background-image', 'url(' + ')');
+		$('.enemyUserName').html("All Out");
+		$('.enemyEmailAddress').html("");
+		$('.enemyUserGender').html("");
+		$('.enemyUserAge').html("");
+	}
+
 }
 
 function convertInputMilesToDegrees(miles) {
 
 	range.latitudeRange = miles/68.6863716
-	range.longitudeRange = Math.abs(miles/(69.1710411 * Math.cos(currentLatitude)))
+	range.longitudeRange = Math.abs(miles/(69.1710411 * Math.cos(currentLocation.currentLatitude)))
 }
 
