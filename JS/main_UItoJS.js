@@ -9,16 +9,20 @@ $("#login").click(function()
      login();
 });
 
-$("#circle-left").click(function()
+$(".circle-left").click(function()
 {
-
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
+	$(".newProfile").fadeOut()
+	$(".newProfile").fadeIn()
 
 });
-$("#circle-right").click(function()
+
+$(".circle-right").click(function()
 {
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
+	$(".newProfile").fadeOut()
+	$(".newProfile").fadeIn()
 });
+
+
 $("#submitRadius").click(function()
 {
     console.log($(userProx).val())

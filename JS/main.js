@@ -32,10 +32,13 @@ function populateOnLogin(obj)
     userGender = obj.userGender
     emailAddress = obj.emailAddress
     alert(userName)
+    console.log(proImg)
     $('.userName').html(userName);
-	$('.userAge').html(userAge);
-	$('.userGender').html(userGender);
-	$('.emailAddress').html(emailAddress);
+    $('.userAge').html(userAge);
+    $('.userGender').html(userGender);
+    $('.proImg').html("<img src='" + proImg + "'></src>");
+    $('.emailAddress').html(emailAddress);
+
 }
 
 //Type: Socket; used to transfer data/commands to the student
