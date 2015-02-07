@@ -74,11 +74,11 @@ socket.on('serverToClient', function(data)
 		}	
 		/**
 		* receiveNewChatMessage
-		* data should contain: message author
+		* data should contain: message sender's userName
 		*/
-		else if (functionName == "receiveNewChatMessage")
+		else if (functionName == "receiveNewMessage")
 		{
-			receiveNewChatMessage(data)
+			receiveNewMessage(data)
 		}
 		else if(functionName == "")
 		{
