@@ -84,6 +84,10 @@ io.sockets.on('connection', function(socket)
 			{
 				storeEnemyProfileList(data)
 			}
+			else if (functionName == "getProfileList")
+			{
+				getProfileList(data);
+			}
 			console.log(hashTable);
 			return true;
 		}
