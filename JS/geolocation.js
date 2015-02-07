@@ -75,7 +75,20 @@ function sendLocationForLogin(position)
 {
 	currentLocation.currentLongitude = position.coords.longitude
 	currentLocation.currentLatitude = position.coords.latitude
+
+	var obj = {
+		userName: userName,
+		accountId: accountId, 
+		proImg: proImg, 
+		userAge: userAge, 
+		userGender: userGender, 
+		emailAddress: emailAddress
+	}
+
+	clientToServer(obj)	   
 }
+
+
 
 /*
 Function: getLocationFromServer() 

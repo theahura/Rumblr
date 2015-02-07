@@ -69,21 +69,20 @@ function loginCallback(result)
 	    str += "Account ID:" + resp['id'] + "<br>";		       
             document.getElementById("profile").innerHTML = str;
 	    */
-	    obj = {
-		userName: resp['displayName'],
-		accountId: resp['id'],
-		proImg: resp['image']['url'],
-		userGender: resp['gender'],
-		ageRange: resp['ageRange']['min'],
-		emailAddress: email,
-		functionName: "checkUserRegistration"
-	
-	    }
-	    console.log(resp['image']['url'])
-	    console.log(email)
-	    populateOnLogin(obj)
-	    clientToServer(obj)	   
-            getLocation()
+    	    obj = {
+        		userName: resp['displayName'],
+        		accountId: resp['id'],
+        		proImg: resp['image']['url'],
+        		userGender: resp['gender'],
+        		ageRange: resp['ageRange']['min'],
+        		emailAddress: email,
+        		functionName: "checkUserRegistration"
+    	    }
+    	    console.log(resp['image']['url'])
+    	    console.log(email)
+    	    populateOnLogin(obj)
+
+            getLocationForLogin()
         });
  
     }
