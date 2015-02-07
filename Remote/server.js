@@ -71,7 +71,7 @@ function serverHandler(data)
 		//data includes: google account id, new location;  userPositionLatitude; userPositionLongitude
 		else if(functionName == "storeGeolocation")
 		{
-			storeGeolocation(data);
+			storeGeoLocation(data);
 		}
 		//Updates the chat messages from one user to another to the database
 		//data includes: user name 1, user name 2, message content 
@@ -80,9 +80,9 @@ function serverHandler(data)
 			//updateMessages(data);
 		}
 		//COMMENT HERE
-		else if (functionName == "")
+		else if (functionName == "requestNearbyRumbles")
 		{
-		
+			requestNearbyRumbles(data);
 		}
 		console.log(hashTable);
 		return true;
@@ -147,19 +147,25 @@ function getGeoLocation(object) {
 	return hashTable[accountId].coordinates;
 }
 
-function nearestGamers(object, range) {
+function requestNearbyRumbles(object) {	
 	latitude = hashTable[object.accountId].coordinates[0];
 	longitude = hashTable[object.accountId].coordinates[1];
 	nearestGamersList = []
 	for (var index in hashTable) {
-		if (latitude-range <= hashTable[index].coordinates[0] 
-			&& hashTable[index].coordinates[0] <= latitude+range
-			&& longitude-range <= hashTable[index].coordinates[1]
-			&& hashTable[index].coordinates[1] <= longitude+range
+		if (latitude-object.latRange <= hashTable[index].coordinates[0] 
+			&& hashTable[index].coordinates[0] <= latitude+object.latRange
+			&& longitude-object.longRange <= hashTable[index].coordinates[1]
+			&& hashTable[index].coordinates[1] <= longitude+object.longRange
 			&& index 
 			!= object.accountId) {
 			nearestGamersList.push(index)
 		}
 	}
-	return nearestGamersList
+
+	var data = {
+		rumblesList: nearestGamersList,
+		functionName: "getNearbyRumbles"
+	}
+
+	serverToClient(data); 
 }
