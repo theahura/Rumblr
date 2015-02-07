@@ -101,6 +101,7 @@ io.sockets.on('connection', function(socket)
 		hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
 		hashTable[object.accountId].coordinates = object.coordinates;
 		hashTable[object.accountId].emailAddress = object.emailAddress;
+		hashTable[object.accountId].userGender = object.userGender;
 	}
 
 	function checkUserRegistration(object) {
@@ -165,6 +166,16 @@ io.sockets.on('connection', function(socket)
 		return hashTable[object.accountId].emailAddress;
 	}
 
+	function storeGender(object) {
+		// saves user email address as a string
+		hashTable[object.accountId].userGender = object.userGender;
+	}
+
+	function getGender(object) {
+		// returns user email address
+		return hashTable[object.accountId].userGender;
+	}
+
 	function requestNearbyRumbles(object) {	
 		latitude = Math.abs(hashTable[object.accountId].coordinates[0]);
 		longitude = Math.abs(hashTable[object.accountId].coordinates[1]);
@@ -174,10 +185,8 @@ io.sockets.on('connection', function(socket)
 				&& Math.abs(hashTable[index].coordinates[0]) <= latitude+object.latRange
 				&& longitude-object.longRange <= Math.abs(hashTable[index].coordinates[1])
 				&& Math.abs(hashTable[index].coordinates[1]) <= longitude+object.longRange
-				&& index 
-				!= object.accountId) {
+				&& index != object.accountId) {
 				nearestGamersList.push(hashTable[index])
-			console.log("Fuck You.")
 			}
 		}
 

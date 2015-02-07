@@ -9,17 +9,11 @@ $("#login").click(function()
      login();
 });
 
-$(".circle-left").click(function()
+$(".circle-left, .circle-right").click(function()
 {
 	$(".newProfile").fadeOut()
 	$(".newProfile").fadeIn()
-
-});
-
-$(".circle-right").click(function()
-{
-	$(".newProfile").fadeOut()
-	$(".newProfile").fadeIn()
+	getProfileFromList(nearbyRumbles.pop())
 });
 
 

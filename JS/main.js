@@ -138,6 +138,6 @@ function getProfileFromList(profile) {
 function convertInputMilesToDegrees(miles) {
 
 	range.latitudeRange = miles/68.6863716
-	range.longitudeRange = Math.abs(miles/(69.1710411 * cos(currentLatitude)))
+	range.longitudeRange = Math.abs(miles/(69.1710411 * Math.cos(currentLatitude)))
 }
 
