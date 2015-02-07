@@ -13,13 +13,11 @@ $("#circle-left").click(function()
 {
 
 	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeIn("slow")
 
 });
 $("#circle-right").click(function()
 {
 	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeOut("slow")
-	$("#profileImage, #swipeContainer, #section, #proImg, #hr, #cover").fadeIn("slow")
 });
 $("#submitRadius").click(function()
 {
