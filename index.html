@@ -51,7 +51,9 @@
             <h3>Rematch</h3>
             <p>When the battle&#8217;s over, report your scores to Rumblr to start tracking your stats. And rematching previous opponents is easy!</p>
           </div>
+
           <button onclick="getLocation()">Get Location</button>
+
         </div>
       </section>
 
@@ -65,10 +67,20 @@
 
 		<!--Links to all other files-->
 		<script type="text/javascript" src="JS/chat.js"></script>
-    <script type="text/javascript" src="JS/gplus.js"></script>
-    <script type="text/javascript" src="JS/geolocation.js"></script>
-    <script type="text/javascript" src="JS/main.js"></script>
-    <script type="text/javascript" src="JS/mainUI.js"></script>
+        <script type="text/javascript" src="JS/gplus.js"></script>
+	    <script type="text/javascript" src="JS/geolocation.js"></script>
+	    <script type="text/javascript" src="JS/main.js"></script>
+        <script type="text/javascript" src="JS/mainUI.js"></script>
+        
+    <script type="text/javascript">
+      $(function() {
+        $('.button').mouseover(function() {
+          $('.fist-icon').addClass('animated bounceInLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function() {
+            $(this).removeClass('animated bounceInLeft');
+            });
+        });
+      });
+    </script>
 
   </body> 
 
