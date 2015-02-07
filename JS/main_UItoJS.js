@@ -27,7 +27,7 @@ $("#submitRadius").click(function()
 {
     console.log($(userProx).val())
     convertInputMilesToDegrees($(userProx).val())
-    $('.userRadius').html(userRadius);
+    $('.userRadius').html($(userProx).val());
 });
 
 $("#getNearbyRumblesButton").click(function()
