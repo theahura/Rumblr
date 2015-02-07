@@ -17,6 +17,8 @@ var currentLocation = {
 var competitionSettings
 var nearbyRumbles = new Array();
 
+var enemyProfile = {}
+
 var range = {
 	longitudeRange: 0.07246,
 	latitudeRange: 0.07246
