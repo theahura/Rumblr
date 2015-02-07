@@ -11,12 +11,20 @@ http://stackoverflow.com/questions/5797852/in-node-js-how-do-i-include-functions
 
 //Type: io; sets up server connection on localhost, channel 3001
 var database = require('./database.js');
+var app = require('express')();
 
 var io = require('socket.io').listen(3001);
 
+app.get('/', function(req, res)
+{
+	res.sendFile(__dirname + '/index.html');
+});
 //On an io socket connection...
 io.sockets.on('connection', function(socket) 
 {
+	socket.on('message', function(message)){
+		io.emit('message', message)
+	}
 
 	socket.on('clientToServer', function(data)
 	{
@@ -30,10 +38,6 @@ io.sockets.on('connection', function(socket)
 			return false;
 		}
 	});
-	socket.on('sendMessage', function(data))
-	{
-		
-	}
 
 	/*
 		This function takes in data from the server remote files and passes it along to the client
@@ -82,9 +86,9 @@ function serverHandler(data)
 			updateMessages(data);
 		}
 		//COMMENT HERE
-		else if (functionName == "sendMessage")
+		else if (functionName == "")
 		{
-			sendMessage()	
+		
 		}
 	}
 	else
