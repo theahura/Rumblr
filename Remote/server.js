@@ -80,7 +80,7 @@ io.sockets.on('connection', function(socket)
 			{
 				requestNearbyRumbles(data);
 			}
-			else if (functionName == "storeSwipeRightProfile")
+			else if (functionName == "storeEnemyProfileList")
 			{
 				storeEnemyProfileList(data)
 			}
@@ -105,7 +105,7 @@ io.sockets.on('connection', function(socket)
 		hashTable[object.accountId].coordinates = object.coordinates;
 		hashTable[object.accountId].emailAddress = object.emailAddress;
 		hashTable[object.accountId].userGender = object.userGender;
-		hashTable[object.accountId].enemyProfileList = [];
+		hashTable[object.accountId].enemyProfileList = {};
 	}
 
 	function checkUserRegistration(object) {
@@ -132,7 +132,8 @@ io.sockets.on('connection', function(socket)
 
 	function storeEnemyProfileList(object) {
 		// adds user info to enemy's enemyProfileList
-		hashTable[object.enemyAccountID].enemyProfileList.push(object.userProfile);
+		console.log("ACCT ID " + object.enemyAccountId)
+		hashTable[object.enemyAccountId].enemyProfileList[object.userProfile.accountId]=object.userProfile;
 	}
 
 	function getProfileList(object) {
