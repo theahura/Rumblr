@@ -33,6 +33,10 @@ function populateOnLogin(obj)
     alert(userName)
 }
 
+$(.userName).html(userName);
+$(.userAge).html(userAge);
+$(.userGender).html(userGender);
+
 //Type: Socket; used to transfer data/commands to the student
 socket = io('http://54.86.173.127:3001');
 
@@ -94,9 +98,9 @@ socket.on('serverToClient', function(data)
 		{
 			receiveMessage(data)
 		}
-		else if(functionName == "")
+		else if(functionName == "getNearbyRumbles")
 		{
-			
+			getNearbyRumbles(data)
 		}
 	}
 	else
@@ -107,21 +111,10 @@ socket.on('serverToClient', function(data)
 
 });
 
-//This function requests the matched user's profile from the server
-
-function requestProfileFromServer() {
-
-	var profile = {
-		functionName: "requestProfileFromServer"
-	}
-	
-	clientToServer(profile)
-
-}
 
 //This function returns the profile requested in the previous function
 
-function getProfileFromServer(profile) {
+function getProfileFromList(profile) {
 
 	var enemyProfile = {
 		enemyUserName: profile.userName,
@@ -132,5 +125,11 @@ function getProfileFromServer(profile) {
 		enemyCurrentLocation: profile.currentLocation
 	}
 
+}
+
+function convertInputMilesToDegrees(miles) {
+
+	range.latitudeRange = miles/68.6863716
+	range.longitudeRange = abs(miles/(69.1710411 * cos(currentLatitude)))
 }
 
