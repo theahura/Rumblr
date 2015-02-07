@@ -43,7 +43,7 @@ ul {
   text-align: center;
 }
 .proImg {
-  background: url() no-repeat;
+  background: url('img/adrian.png') no-repeat;
   float: right;
   height: 8rem;
   width: 8rem;
