@@ -114,9 +114,9 @@ hr{
         text-align: center;
       }
 
-    .getRumblesButton
-    {
+    .getRumblesButton {
       color:white;
+      margin-top: 2rem;
       width: 30%;
       text-align: center;
     }
