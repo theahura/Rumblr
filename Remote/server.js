@@ -105,7 +105,7 @@ io.sockets.on('connection', function(socket)
 		hashTable[object.accountId].coordinates = object.coordinates;
 		hashTable[object.accountId].emailAddress = object.emailAddress;
 		hashTable[object.accountId].userGender = object.userGender;
-		hashTable[object.accountId].swipeRightProfile = [];
+		hashTable[object.accountId].enemyProfileList = [];
 	}
 
 	function checkUserRegistration(object) {
@@ -130,14 +130,19 @@ io.sockets.on('connection', function(socket)
 		return hashTable[object.accountId].gameChoices;
 	}
 
-	function storeSwipeRightProfile(object) {
-		// saves Swipe Right IDs of user
-		hashTable[object.accountId].swipeRightProfile.push(object.enemyProfile);
+	function storeEnemyProfileList(object) {
+		// adds user info to enemy's enemyProfileList
+		hashTable[object.enemyAccountID].enemyProfileList.push(object.userProfile);
 	}
 
-	function getSwipeRightProfile(object) {
-		// returns Swipe Right IDs of user
-		return hashTable[object.accountId].swipeRightProfile;
+	function getProfileList(object) {
+		// returns user's enemyProfileList
+		var data = {
+			enemyProfileList: hashTable[object.accountId].enemyProfileList,
+			functionName: "receiveEnemyProfileList"
+		}
+
+		serverToClient(data)
 	}
 
 	function storeGeoLocation(object) {
