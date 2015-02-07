@@ -1,41 +1,8 @@
 body {
-  color: #EF4642;
+  color: #ef4642;
 }
-.top-nav {
-  display: block;
-  margin-bottom: 0;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 0;
-  position: relative;
-  vertical-align: baseline;
-  width: 90%;
-}
-ul {
-  display: block;
-  float: left;
-  margin: 0;
+.slide .container {
   padding: 0;
-}
-.dropdown{
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-.dropdown li {
-  display: list-item;
-  float: left;
-  list-style-position: outside;
-  list-style-image: none;
-  list-style-type: none;
-  padding-left: 1em;
-  padding-right: 1em;
-  position: relative;
-}
-.dropdown li a {
-  display: block;
-  color: black;
-  text-decoration: none;
 }
 .section h1 {
   font-style: normal;
@@ -81,7 +48,19 @@ td{
      right:249px;
      top:10px; 
 }
+hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 50%;
+    border-color: #EF4642
+    color: #EF4642;
 
+}
 .spacer-5 {
   height: 5%;
   width: 100%;
@@ -113,7 +92,7 @@ td{
   background: ;
 }
 .swipeContainer {
-  color: red;
+  color: #ef4642;
   width: 100%;
   height: 100%;
 }
@@ -124,7 +103,7 @@ td{
     vertical-align: top;
   }
     .newProfile {
-      background: red;
+      background: #ef4642;
       width: 100%;
       height: 100%;
     }

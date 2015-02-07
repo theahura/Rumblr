@@ -23,11 +23,11 @@ $(document).ready(function() {
         //Navigation
         menu: false,
         anchors:['firstSlide', 'secondSlide'],
-        navigation: false,
+        navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['firstSlide', 'secondSlide'],
         slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+        slidesNavPosition: 'top',
 
         //Scrolling
         css3: true,

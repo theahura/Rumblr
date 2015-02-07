@@ -94,9 +94,9 @@ socket.on('serverToClient', function(data)
 		{
 			receiveMessage(data)
 		}
-		else if(functionName == "")
+		else if(functionName == "getNearbyRumbles")
 		{
-			
+			getNearbyRumbles(data)
 		}
 	}
 	else
