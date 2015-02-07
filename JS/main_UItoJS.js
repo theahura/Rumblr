@@ -9,13 +9,19 @@ $("#login").click(function()
      login();
 });
 
-$(".circle-left, .circle-right").click(function()
+$(".circle-left").click(function()
 {
 	$(".newProfile").fadeOut()
 	getProfileFromList(nearbyRumbles.pop())
 	$(".newProfile").fadeIn()
 });
 
+$(".circle-right").click(function()
+{
+	$(".newProfile").fadeOut()
+	getProfileFromList(nearbyRumbles.pop())
+	$(".newProfile").fadeIn()
+});
 
 $("#submitRadius").click(function()
 {
