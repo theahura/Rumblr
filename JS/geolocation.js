@@ -63,7 +63,7 @@ This function takes no parameters. It sends the user's account ID to the server 
 previous location. Not much else to say here. 
 */
 
-function getLocationFromServer() {
+function requestLocationFromServer() {
 
 	var data = {
 		functionName: "getLocationFromServer",
@@ -83,7 +83,28 @@ This should be sent from the server to the function. This location should be the
 location of the user.
 */
 
-function requestLocationFromServer(data) {
+function getLocationFromServer(data) {
 
-	alert(data.location)
+	return(data.location)
+}
+
+//This function requests nearby rumbles
+
+function requestNearbyRumblers(area) {
+
+	var nearbyRumblers = {
+		functionName: "requestNearbyRumbles"
+		radius: area
+		location: currentLocation
+	}
+
+	clientToServer(nearbyRumblers)
+
+}
+
+//This function returns nearby rumbles
+
+function getNearbyRumbles(rumblers) {
+
+	nearbyRumblers = rumblers
 }
