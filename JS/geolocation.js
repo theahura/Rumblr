@@ -47,7 +47,7 @@ function sendLocation(position) {
 		functionName: "storeGeolocation",
 		userPositionLatitude: position.coords.latitude,
 		userPositionLongitude: position.coords.longitude,
-		accountId: userName
+		accountId: accountId
 	}
 
 	clientToServer(data)
@@ -67,7 +67,7 @@ function getLocationFromServer() {
 
 	var data = {
 		functionName: "getLocationFromServer",
-		accountId: userName
+		accountId: accountId
 	}
 
 	clientToServer(data)
