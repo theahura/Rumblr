@@ -151,7 +151,10 @@ hr{
   height: 100px;
   top: 30%;
 }
-
+.refresh {
+  color: white;
+  padding: 1.5rem 0;
+}
 .submitButton {
     margin-top:10px;
     padding: 1rem;
