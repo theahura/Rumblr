@@ -3,7 +3,7 @@ $("#getLocation").click(function()
     getLocation();
 });
 
-$("#logIn").click(function()
+$("#login").click(function()
 {
     login();
 }
