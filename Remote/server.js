@@ -80,9 +80,9 @@ io.sockets.on('connection', function(socket)
 			{
 				requestNearbyRumbles(data);
 			}
-			else if (functionName == "storeSwipeRightProfile")
+			else if (functionName == "storeEnemyProfileList")
 			{
-				storeSwipeRightProfile(data)
+				storeEnemyProfileList(data)
 			}
 			console.log(hashTable);
 			return true;
@@ -132,7 +132,8 @@ io.sockets.on('connection', function(socket)
 
 	function storeEnemyProfileList(object) {
 		// adds user info to enemy's enemyProfileList
-		hashTable[object.enemyAccountID].enemyProfileList[object.userProfile.accountId]=object.userProfile;
+		console.log("ACCT ID " + object.enemyAccountId)
+		hashTable[object.enemyAccountId].enemyProfileList[object.userProfile.accountId]=object.userProfile;
 	}
 
 	function getProfileList(object) {
