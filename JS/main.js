@@ -60,14 +60,20 @@ socket.on('ServerToClient', function(data)
 	if (data.functionName)
 	{
 		var functionName = data.functionName
-
+		/**
+		* populateOnLogin 
+		* data should contain: user settings
+		*/
 		if (functionName == "populateOnLogin")
 		{
-			
+			populateOnLogin(data)
 		}	
+		/**
+		* data should contain: new chat message
+		*/
 		else if (functionName == "receiveNewChatMessage")
 		{
-
+			receiveNewChatMessage(data)
 		}
 	}
 	else
