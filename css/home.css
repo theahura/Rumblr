@@ -92,7 +92,6 @@ td{
 }
 
 .cover {
-  display: none;
   position:fixed;
   top:0px;
   left:0px;
@@ -102,6 +101,7 @@ td{
   background-color:rgba(200,200,200,.5);
   text-align: center;
 }
+
   .logInButton {
     color: white;
     margin-top: 20%;
