@@ -10,6 +10,7 @@ Functions:
 
 	getLocation() - get the location from the user, passes to sendLocation()
 	sendLocation(position) - sends the location to the server; takes location as parameter
+	getLocationFromServer - sends the user's account ID to the server to get their previous location
 	
 
 */
@@ -22,8 +23,8 @@ If it does, it gets the user's location and passes it to the sendLocation functi
 If not, it displays an error message. 
 */
 
-function getLocation()
-{
+function getLocation() {
+
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(sendLocation)
 	} else {
@@ -46,7 +47,7 @@ function sendLocation(position) {
 		functionName: "storeGeolocation",
 		userPositionLatitude: position.coords.latitude,
 		userPositionLongitude: position.coords.longitude,
-		userName: userName
+		accountId: accountId
 	}
 
 	clientToServer(data)
@@ -55,14 +56,34 @@ function sendLocation(position) {
 	
 }
 
+/*
+Function: getLocationFromServer() 
+----------------------------------------
+This function takes no parameters. It sends the user's account ID to the server to get their
+previous location. Not much else to say here. 
+*/
+
 function getLocationFromServer() {
 
 	var data = {
 		functionName: "getLocationFromServer",
-		userName: userName
+		accountId: accountId
 	}
 
 	clientToServer(data)
 
 	alert("Sent request to server")
+}
+
+/*
+Function: requestLocationFromServer
+----------------------------------------
+This function creates an alert returning the location associated with the variable data.
+This should be sent from the server to the function. This location should be the last known
+location of the user.
+*/
+
+function requestLocationFromServer(data) {
+
+	alert(data.location)
 }

@@ -1,5 +1,6 @@
 body {
-  background-color: #f6f6f6;
+  background-color: #FAFAFA;
+  color: #EF4642;
 }
 .top-nav {
   display: block;
@@ -38,9 +39,31 @@ ul {
   text-decoration: none;
 }
 .section h1 {
-   font-style: normal;
-   text-align: center;
-  }
-.proimg {
-  background: url();
+  font-style: normal;
+  text-align: center;
+}
+.profileImage {
+  background: url() no-repeat;
+  float: right;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+}
+.chat{
+  margin: 0 auto;
+  width: 60%;
+}
+.chatpage{
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  border: border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+    border-spacing: 300px;
 }

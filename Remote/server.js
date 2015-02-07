@@ -69,9 +69,9 @@ function serverHandler(data)
 		}
 		//Updates the chat messages from one user to another to the database
 		//data includes: user name 1, user name 2, message content 
-		else if (functionName == "updateChatMessages")
+		else if (functionName == "updateMessages")
 		{
-			updateChatMessages(data);
+			updateMessages(data);
 		}
 	}
 	else
