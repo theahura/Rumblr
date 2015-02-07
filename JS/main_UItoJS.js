@@ -45,7 +45,6 @@ $(".circle-right").click(function()
 
 $("#submitRadius").click(function()
 {
-    console.log($(userProx).val())
     convertInputMilesToDegrees($(userProx).val())
     $('.userRadius').html($(userProx).val());
 });
@@ -54,8 +53,6 @@ $("#getNearbyRumblesButton").click(function()
 {
 	requestNearbyRumbles();
 })
-
-
 
 $(".refresh").click(function()
 {

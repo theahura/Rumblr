@@ -59,16 +59,7 @@ function loginCallback(result)
                     }
                 }
             }
-	    /*
-            var str = "Name:" + resp['displayName'] + "<br>";
-            str += "Image:" + resp['image']['url'] + "<br>";
-            str += "<img src='" + resp['image']['url'] + "' /><br>";
- 
-            str += "URL:" + resp['url'] + "<br>";
-            str += "Email:" + email + "<br>";
-	    str += "Account ID:" + resp['id'] + "<br>";		       
-            document.getElementById("profile").innerHTML = str;
-	    */
+	 
 	    var pic = resp['image']['url']
 	    var array = pic.split('?')
     	    obj = {
@@ -80,8 +71,8 @@ function loginCallback(result)
         		emailAddress: email,
         		functionName: "checkUserRegistration"
     	    }
-    	    console.log(resp['image']['url'])
-    	    console.log(email)
+    	    //console.log(resp['image']['url'])
+    	    //console.log(email)
     	    populateOnLogin(obj)
 
             getLocationForLogin()
