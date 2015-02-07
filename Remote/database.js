@@ -1,19 +1,60 @@
-/*
+var hashTable = {}
 
-REMOTE
+function addToHashtable(object) {
+	// Hashtable data elements
+	googleID = object.googleID;
+	hashTable[googleID] = [];
+	hashTable[googleID].username = object.username;
+	hashTable[googleID].password = object.password;
+	hashTable[googleID].gameChoices = [];
+	hashTable[googleID].swipeRightIDs = [];
+	hashTable[googleID].location = [];
+}
 
-This file details all of the code necessary to do database work; while it would normally use postgres, for this case arrays will be fast enough
+function checkUserRegistration(object) {
+	// returns True if user is already registered, False if user is new
+	googleIDPossible = object.googleID;
+	if (hashTable[googleIDPossible]) {
+		return True;
+	}
 
-checkUserPass() - checks username and password from the right hash
+	else {
+		return False;
+	}
+}
 
-storeNotification(user, note) - save notification to a username 
+function storeGameChoices(object) {
+	// saves game choices into hashtable
+	googleID = object.googleID;
+	hashTable[googleID].gameChoices = googleID.gameChoices;
+}
 
-getNotification(user, note) - get a notification for a username
+function getGameChoices(object) {
+	// returns game choices of user
+	googleID = object.googleID;
+	return hashTable[googleID].gameChoices;
+}
 
-getTags(user, tags) - get a tag array based on username
+function storeSwipeRightIDs(object) {
+	// saves Swipe Right IDs of user
+	googleID = object.googleID;
+	hashTable[googleID].swipeRightIDs = object.swipeRightIDs;
+}
 
-getLocation() - get the location of users nearby (random sample)
+function getSwipeRightIDs(object) {
+	// returns Swipe Right IDs of user
+	googleID = object.googleID;
+	return hashTable[googleID].swipeRightIDs;
+}
 
-storeLocation(user, location) - store a location of a user in a hash 
+function storeGeoLocation(object) {
+	// saves latitude and longitude of user
+	googleID = object.googleID;
+	hashTable[googleID].location = [object.latitude,object.longitude];
+}
 
-*/
+function getGeoLocation(object) {
+	// returns latitude and longitude of user
+	googleID = object.googleID;
+	return hashTable[googleID].location
+}
