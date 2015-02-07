@@ -24,7 +24,7 @@ If not, it displays an error message.
 */
 
 function getLocation() {
-
+	alert();
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(sendLocation)
 	} else {
