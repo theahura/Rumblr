@@ -142,10 +142,6 @@ html, body {
     cursor: pointer;
     text-decoration: none;
 }
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span {
-    background: #333;
-}
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     top: 2px;

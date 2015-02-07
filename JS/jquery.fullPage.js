@@ -350,9 +350,9 @@
 				$(this).css('padding', options.paddingTop  + ' 0 ' + options.paddingBottom + ' 0');
 			}
 
-			if (typeof options.sectionsColor[index] !==  'undefined') {
-				$(this).css('background-color', options.sectionsColor[index]);
-			}
+			// if (typeof options.sectionsColor[index] !==  'undefined') {
+			// 	$(this).css('background-color', options.sectionsColor[index]);
+			// }
 
 			if (typeof options.anchors[index] !== 'undefined') {
 				$(this).attr('data-anchor', options.anchors[index]);

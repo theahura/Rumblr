@@ -49,6 +49,20 @@ socket = io('http://54.86.173.127:3001');
 socket.on('connect', function() 
 {
 });
+
+socket.on("incomingMessage", function(data)
+{
+	console.log(data.message);
+});
+
+function sendMessage(inputText)
+{
+	socket.emit("message", {
+		text:inputText
+	});	
+}
+
+
 /**
 * 
 */
