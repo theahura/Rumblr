@@ -39,7 +39,7 @@ function populateOnLogin(obj)
     $('.proImg').css('background-image', 'url(' + proImg + ')');
     // $('.proImg').attr("src", proImg);
     $('.emailAddress').html(emailAddress);
-
+    $('.userProx').html(userProx);
 }
 
 //Type: Socket; used to transfer data/commands to the student
