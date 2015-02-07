@@ -80,6 +80,10 @@ io.sockets.on('connection', function(socket)
 			{
 				requestNearbyRumbles(data);
 			}
+			else if (functionName == "storeSwipeRightProfile")
+			{
+				storeSwipeRightProfile(data)
+			}
 			console.log(hashTable);
 			return true;
 		}
@@ -98,16 +102,16 @@ io.sockets.on('connection', function(socket)
 		hashTable[object.accountId].proImg = object.proImg;
 		hashTable[object.accountId].accountId = object.accountId;
 		hashTable[object.accountId].username = object.userName;
-		hashTable[object.accountId].swipeLeftIDs = object.swipeLeftIDs;
 		hashTable[object.accountId].coordinates = object.coordinates;
 		hashTable[object.accountId].emailAddress = object.emailAddress;
 		hashTable[object.accountId].userGender = object.userGender;
+		hashTable[object.accountId].enemyProfileList = {};
 	}
 
 	function checkUserRegistration(object) {
 		// returns True if user is already registered, False if user is new
 		if (hashTable[object.accountId]) {
-			return hashTable[object.accountId];
+			getProfileList(object)
 		}
 
 		else {
@@ -126,14 +130,19 @@ io.sockets.on('connection', function(socket)
 		return hashTable[object.accountId].gameChoices;
 	}
 
-	function storeswipeLeftIDs(object) {
-		// saves Swipe Right IDs of user
-		hashTable[object.accountId].swipeLeftIDs = object.swipeLeftIDs;
+	function storeEnemyProfileList(object) {
+		// adds user info to enemy's enemyProfileList
+		hashTable[object.enemyAccountID].enemyProfileList[object.userProfile.accountId]=object.userProfile;
 	}
 
-	function getswipeLeftIDs(object) {
-		// returns Swipe Right IDs of user
-		return hashTable[object.accountId].swipeLeftIDs;
+	function getProfileList(object) {
+		// returns user's enemyProfileList
+		var data = {
+			enemyProfileList: hashTable[object.accountId].enemyProfileList,
+			functionName: "receiveEnemyProfileList"
+		}
+
+		serverToClient(data)
 	}
 
 	function storeGeoLocation(object) {
@@ -177,10 +186,11 @@ io.sockets.on('connection', function(socket)
 	}
 
 	function requestNearbyRumbles(object) {	
+					nearestGamersList = []
+
 		if (object.accountId && hashTable[object.accountId] && hashTable[object.accountId].coordinates) {
 			latitude = Math.abs(hashTable[object.accountId].coordinates[0]);
 			longitude = Math.abs(hashTable[object.accountId].coordinates[1]);
-			nearestGamersList = []
 			for (var index in hashTable) {
 				if (latitude-object.latRange  <= Math.abs(hashTable[index].coordinates[0]) 
 					&& Math.abs(hashTable[index].coordinates[0]) <= latitude+object.latRange

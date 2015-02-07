@@ -11,7 +11,7 @@ $("#login").click(function()
 
 $(".circle-left").click(function()
 {
-	$(".newProfile").fadeOut("400", function(){
+	$(".newProfile").fadeOut("slow", function(){
 		getProfileFromList(nearbyRumbles.pop())
 	})
 
@@ -20,8 +20,26 @@ $(".circle-left").click(function()
 
 $(".circle-right").click(function()
 {
-	$(".newProfile").fadeOut()
-	getProfileFromList(nearbyRumbles.pop())
+	if(enemyProfile)
+	{
+		var obj = {
+			enemyAccountId: enemyProfile.accountId,
+			functionName: "storeEnemyProfileList",
+			userProfile: {
+					userName: userName, 
+					accountId: accountId,
+					emailAddress: emailAddress,
+					proImg: proImg,
+					userGender: userGender, 
+					userAge: userAge
+				}
+		}
+		socket.emit('clientToServer', obj)
+	}
+
+	$(".newProfile").fadeOut("slow", function(){
+		getProfileFromList(nearbyRumbles.pop())
+	})
 	$(".newProfile").fadeIn()
 });
 
@@ -29,7 +47,7 @@ $("#submitRadius").click(function()
 {
     console.log($(userProx).val())
     convertInputMilesToDegrees($(userProx).val())
-    $('.userRadius').html(userRadius);
+    $('.userRadius').html($(userProx).val());
 });
 
 $("#getNearbyRumblesButton").click(function()

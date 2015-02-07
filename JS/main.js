@@ -106,6 +106,10 @@ socket.on('serverToClient', function(data)
 		{
 			getNearbyRumbles(data)
 		}
+		else if(functionName == "receiveEnemyProfiles")
+		{
+			receiveEnemyProfiles(data); 
+		}
 	}
 	else
 	{
@@ -114,7 +118,6 @@ socket.on('serverToClient', function(data)
 	}
 
 });
-
 
 //This function returns the profile requested in the previous function
 
@@ -145,6 +148,8 @@ function getProfileFromList(profile) {
 		$('.enemyEmailAddress').html("");
 		$('.enemyUserGender').html("");
 		$('.enemyUserAge').html("");
+
+		enemyProfile = null; 
 	}
 
 }
