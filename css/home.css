@@ -64,6 +64,9 @@ hr{
   cursor: pointer;
 }
 
+.profile {
+  margin-top: 6rem;
+}
 .cover {
   position:fixed;
   top: 0px;
