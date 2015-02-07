@@ -12,8 +12,8 @@ $("#login").click(function()
 $(".circle-left, .circle-right").click(function()
 {
 	$(".newProfile").fadeOut()
-	$(".newProfile").fadeIn()
 	getProfileFromList(nearbyRumbles.pop())
+	$(".newProfile").fadeIn()
 });
 
 
