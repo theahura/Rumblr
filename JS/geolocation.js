@@ -74,3 +74,16 @@ function getLocationFromServer() {
 
 	alert("Sent request to server")
 }
+
+/*
+Function: requestLocationFromServer
+----------------------------------------
+This function creates an alert returning the location associated with the variable data.
+This should be sent from the server to the function. This location should be the last known
+location of the user.
+*/
+
+function requestLocationFromServer(data) {
+
+	alert(data.location)
+}
