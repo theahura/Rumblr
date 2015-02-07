@@ -9,6 +9,12 @@ $("#login").click(function()
      login();
 });
 
+$("#submitRadius").click(function()
+{
+    console.log($(userProx).val())
+    convertInputMilesToDegrees($(userProx).val())
+});
+
 // $("#getLocationFromServer").click(function()
 // {
 //     getLocationFromServer();

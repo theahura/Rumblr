@@ -172,3 +172,16 @@ hr{
   margin-top: 230px;
   float: left;
 }
+
+.submitButton {
+    margin-top:10px;
+    padding:10px;
+    display: inline-block;
+    background-color:#EF4642;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.radiusBox{
+    text-align:center;
+}
