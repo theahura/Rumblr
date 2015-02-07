@@ -23,9 +23,14 @@ Functions: T
 
 */
 //This function checks for the validity of the login.
-function populateOnLogin()
+function populateOnLogin(obj)
 {
-
+    userName = obj.userName
+    accountId = obj.accountId
+    proImg = obj.proImg
+    userAge = obj.userAge
+    userGender = obj.userGender
+    alert(userName)
 }
 
 //Type: Socket; used to transfer data/commands to the student
