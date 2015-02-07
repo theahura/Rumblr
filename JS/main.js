@@ -47,13 +47,13 @@ socket.on('connect', function()
 /**
 * 
 */
-function ClientToServer(data)
+function clientToServer(data)
 {
 	console.log(data)
-	socket.emit('ClientToServer', data)
+	socket.emit('clientToServer', data)
 }
 
-socket.on('ServerToClient', function(data)
+socket.on('serverToClient', function(data)
 {
 
 	if (data.functionName)
