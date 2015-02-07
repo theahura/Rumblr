@@ -100,6 +100,7 @@ io.sockets.on('connection', function(socket)
 		hashTable[object.accountId].username = object.userName;
 		hashTable[object.accountId].swipeRightIDs = object.swipeRightIDs;
 		hashTable[object.accountId].coordinates = object.coordinates;
+		hashTable[object.accountId].emailAddress = object.emailAddress;
 	}
 
 	function checkUserRegistration(object) {
@@ -145,7 +146,7 @@ io.sockets.on('connection', function(socket)
 	}
 
 	function storeImage(object) {
-		// saves image as a string
+		// saves user image as a string
 		hashTable[object.accountId].image = object.image;
 	}
 
@@ -154,9 +155,19 @@ io.sockets.on('connection', function(socket)
 		return hashTable[object.accountId].image;
 	}
 
+	function storeEmail(object) {
+		// saves user email address as a string
+		hashTable[object.accountId].emailAddress = object.emailAddress;
+	}
+
+	function getEmail(object) {
+		// returns user email address
+		return hashTable[object.accountId].emailAddress;
+	}
+
 	function requestNearbyRumbles(object) {	
-		latitude = hashTable[object.accountId].coordinates[0];
-		longitude = hashTable[object.accountId].coordinates[1];
+		latitude = Math.abs(hashTable[object.accountId].coordinates[0]);
+		longitude = Math.abs(hashTable[object.accountId].coordinates[1]);
 		nearestGamersList = []
 		for (var index in hashTable) {
 			if (latitude-object.latRange  <= hashTable[index].coordinates[0] 
@@ -166,6 +177,7 @@ io.sockets.on('connection', function(socket)
 				&& index 
 				!= object.accountId) {
 				nearestGamersList.push(hashTable[index])
+			console.log("Fuck You.")
 			}
 		}
 
