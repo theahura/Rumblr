@@ -18,7 +18,6 @@ var io = require('socket.io').listen(3001);
 //On an io socket connection...
 io.sockets.on('connection', function(socket) 
 {
-
 	socket.on('clientToServer', function(data)
 	{
 		if (serverHandler(data))
