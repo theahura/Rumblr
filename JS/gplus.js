@@ -72,7 +72,7 @@ function loginCallback(result)
 	    obj = {
 		userName: resp['displayName'],
 		accountId: resp['id'],
-		proImage: resp['image']['url'],
+		proImg: resp['image']['url'],
 		userGender: resp['gender'],
 		ageRange: resp['ageRange']['min'],
 		emailAddress: email,

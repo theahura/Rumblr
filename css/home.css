@@ -9,7 +9,6 @@ body {
   text-align: center;
 }
 .proImg {
-  background: url('') no-repeat;
   background-size: contain;
   display: block;
   float: right;
@@ -115,9 +114,9 @@ hr{
         text-align: center;
       }
 
-    .getRumblesButton
-    {
+    .getRumblesButton {
       color:white;
+      margin-top: 2rem;
       width: 30%;
       text-align: center;
     }
