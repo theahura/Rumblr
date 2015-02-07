@@ -18,7 +18,7 @@ var io = require('socket.io').listen(3001);
 io.sockets.on('connection', function(socket) 
 {
 
-	socket.on('ClientToServer', function(data)
+	socket.on('clientToServer', function(data)
 	{
 		if (serverHandler(data) == false)
 		{
@@ -34,9 +34,9 @@ io.sockets.on('connection', function(socket)
 		@param: data; type: object; the data that is passed from the remote server to the client
 		@return: boolean showing whether or not the function worked
 	*/
-	function ServerToClient(data)
+	function serverToClient(data)
 	{
-		socket.emit("ServerToClient", data);
+		socket.emit("serverToClient", data);
 	}
 
 });
@@ -50,7 +50,7 @@ io.sockets.on('connection', function(socket)
 function serverHandler(data)
 {
 	console.log(data);
-	
+
 	if(data.functionName)
 	{
 		var functionName = data.functionName;
