@@ -55,10 +55,6 @@ function sendLocation(position) {
 	
 }
 
-/*
-
-*/
-
 function getLocationFromServer() {
 
 	var data = {
