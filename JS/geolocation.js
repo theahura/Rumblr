@@ -77,12 +77,14 @@ function sendLocationForLogin(position)
 	currentLocation.currentLatitude = position.coords.latitude
 
 	var obj = {
+        functionName: "checkUserRegistration",
 		userName: userName,
 		accountId: accountId, 
 		proImg: proImg, 
 		userAge: userAge, 
 		userGender: userGender, 
-		emailAddress: emailAddress
+		emailAddress: emailAddress,
+		coordinates: [currentLocation.currentLatitude, currentLocation.currentLongitude]
 	}
 
 	clientToServer(obj)	   
@@ -144,7 +146,7 @@ function requestNearbyRumbles() {
 
 function getNearbyRumbles(data) {
 
-	console.log(data)
+	console.log(data.rumblesList)
 	nearbyRumbles = data.rumblesList
 
 	if (nearbyRumbles.length > 0 ) {
