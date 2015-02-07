@@ -23,7 +23,7 @@ $(".circle-right").click(function()
 	if(enemyProfile)
 	{
 		var obj = {
-			enemyAccountId: enemyProfile.accountId,
+			enemyAccountId: enemyProfile.enemyAccountId,
 			functionName: "storeEnemyProfileList",
 			userProfile: {
 					userName: userName, 
