@@ -18,18 +18,21 @@
       <script src="https://apis.google.com/js/client:platform.js" async defer>
       </script>
 
+      <!--Sockets -->
+      <script src="http://54.86.173.127:3001/socket.io/socket.io.js"></script>
+
       <!--fullPage.js -->
       <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 
     </head>
     
     <body>
-
+      
       <div class="cover">
         <div class="button logInButton" id="login">Log In</div> 
       </div>
 
-      <div class="fullpage">
+      <div id="fullpage">
         <div class="section"  style="background-color:#FFFFFF">
           <div  style="background-color:#FFFFFF" class="slide">
             <div class="container">
@@ -60,11 +63,12 @@
             <h1>HOME</h1>
             <ul class="swipeContainer"> 
               <li>
+                <div class="circle-left"><h1>&#10003</h1></div>
               </li>
               <li>
                 <div class="newProfile">
                   <div class="spacer-5"></div>
-                  <div class="otherUserProfileyhb7Picture">
+                  <div class="otherUserProfilePicture">
                   </div> 
                   <div class="spacer-5"></div>
                   <div class="otherUserInfo otherUserGender">
@@ -81,6 +85,7 @@
                 </div>
               </li>
               <li>
+                <div class="circle-right"><h1>&#x2718</h1></div>
               </li>
             </ul>
           </div>
@@ -112,7 +117,7 @@
       <script type="text/javascript" src="JS/gplus.js"></script>
       <script type="text/javascript" src="JS/jquery.fullPage.js"></script>
       <script type="text/javascript" src="JS/main.js"></script>
-      <script type="text/javascript" src="JS/chat.js"></script>
+      <!--<script type="text/javascript" src="JS/chat.js"></script>-->
       <script type="text/javascript" src="JS/geolocation.js"></script>
       <script type="text/javascript" src="JS/mainUI.js"></script>
       <script type="text/javascript" src="JS/main_UItoJS.js"></script>

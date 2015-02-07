@@ -74,7 +74,7 @@ function loginCallback(result)
 		proImage: resp['image']['url'],
 		userAge: resp['ageRange']['min'],
 		userGender: resp['gender'],
-		functionName: "logIn"
+		functionName: "checkUserRegistration"
 		 
 	    }
 

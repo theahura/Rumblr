@@ -92,7 +92,6 @@ td{
 }
 
 .cover {
-  display: none;
   position:fixed;
   top:0px;
   left:0px;
@@ -102,6 +101,7 @@ td{
   background-color:rgba(200,200,200,.5);
   text-align: center;
 }
+
   .logInButton {
     color: white;
     margin-top: 20%;
@@ -116,7 +116,7 @@ td{
 }
   .swipeContainer li {
     display: inline-block;
-    width: 33.3%;
+    width: 33%;
     height: 100%;
     vertical-align: top;
   }
@@ -135,3 +135,25 @@ td{
         color: white;
         text-align: center;
       }
+.circle-left {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  padding-top: 15px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 230px;
+  float: right;
+}
+.circle-right {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  padding-top: 15px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 230px;
+  float: left;
+}
