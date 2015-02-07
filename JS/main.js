@@ -98,11 +98,11 @@ socket.on('serverToClient', function(data)
 function requestProfileFromServer() {
 
 	var profile = {
-		functionName: "requestProfileFromServer"
-		accountId: null
-		userAge: null
-		userGender: null
-		proImg: null
+		functionName: "requestProfileFromServer",
+		accountId: null,
+		userAge: null,
+		userGender: null,
+		proImg: null,
 		currentLocation: null
 	}
 	
