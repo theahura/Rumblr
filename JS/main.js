@@ -127,8 +127,8 @@ function getProfileFromServer(profile) {
 		enemyUserName: profile.userName,
 	 	enemyAccountId:  profile.accountId,
 		enemyProImg: profile.proImg,
-		enemyUserAge: profile.userAge,
 		enemyUserGender: profile.userGender,
+		enemyUserAge: profile.userAge,
 		enemyCurrentLocation: profile.currentLocation
 	}
 

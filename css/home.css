@@ -106,6 +106,9 @@ td{
     color: white;
     margin-top: 20%;
   }
+  .logInText {
+    padding: 1.5rem 0;
+  }
 .profileImage {
   background: ;
 }
@@ -116,7 +119,7 @@ td{
 }
   .swipeContainer li {
     display: inline-block;
-    width: 33.3%;
+    width: 33%;
     height: 100%;
     vertical-align: top;
   }
@@ -135,3 +138,25 @@ td{
         color: white;
         text-align: center;
       }
+.circle-left {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  padding-top: 15px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 230px;
+  float: right;
+}
+.circle-right {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  padding-top: 15px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  margin-top: 230px;
+  float: left;
+}
