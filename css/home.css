@@ -106,6 +106,9 @@ td{
     color: white;
     margin-top: 20%;
   }
+  .logInText {
+    padding: 1.5rem 0;
+  }
 .profileImage {
   background: ;
 }
