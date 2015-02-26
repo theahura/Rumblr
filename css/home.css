@@ -43,18 +43,6 @@ body {
      right:249px;
      top:10px; 
 }
-hr{
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1px;
-  width: 50%;
-  border-color: #EF4642
-  color: #EF4642;
-}
 .spacer-5 {
   height: 5%;
   width: 100%;
@@ -68,6 +56,7 @@ hr{
   margin-top: 6rem;
 }
 .cover {
+  display: none;
   position:fixed;
   top: 0px;
   left: 0px;
@@ -100,19 +89,24 @@ hr{
     vertical-align: top;
   }
     .newProfile {
-      border-radius: 20px;
+      border-radius: 40px;
+      -moz-border-radius: 40px;
+      -webkit-border-radius: 40px;
       background: #ef4642;
       width: 80%;
       height: 70%;
       margin: 0 10%;
-      padding: 5%;
-      -webkit-box-shadow: 4px 4px 0 #ccc;
-      -moz-box-shadow:    4px 4px 0 #ccc;
-      box-shadow:         4px 4px 0 #ccc;
+      border: 2px solid #ccc;
+      -webkit-box-shadow: 4px 4px 4px #ccc;
+      -moz-box-shadow:    4px 4px 4px #ccc;
+      box-shadow:         4px 4px 4px #ccc;
     }
       .otherUserProfilePicture {
         background: white;
         background-size: 100%;
+        border-radius: 40px 40px 0 0;
+        -moz-border-radius: 40px 40px 0 0;
+        -webkit-border-radius: 40px 40px 0 0;
         width: 100%;
         height: 50%;
       }
@@ -127,13 +121,16 @@ hr{
       width: 30%;
       text-align: center;
       padding-top: 6%;
-      -webkit-box-shadow: 4px 4px 0 #ccc;
-      -moz-box-shadow:    4px 4px 0 #ccc;
-      box-shadow:         4px 4px 0 #ccc;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 6px 0 #960F0D;
+      -moz-box-shadow: 0 6px 0 #960F0D;
+      box-shadow: 0 6px 0 #960F0D;
     }
     .getRumblesButton:active {
-      left: 2px;
-      bottom: -2px;
+      top: 3px;
+      -webkit-box-shadow: 0 3px 0 #960F0D;
+      -moz-box-shadow: 0 3px 0 #960F0D;
+      box-shadow: 0 3px 0 #960F0D;
     }
 
 .circle-left {
