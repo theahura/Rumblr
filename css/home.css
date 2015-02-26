@@ -55,6 +55,11 @@ body {
 .profile {
   margin-top: 6rem;
 }
+.profile ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 .cover {
   display: none;
   position:fixed;

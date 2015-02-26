@@ -1,5 +1,27 @@
 @font-face {
   font-family: 'CooperHewitt';
+  src: url('fonts/CooperHewitt-Book.eot'); /* IE9 Compat Modes */
+  src: url('fonts/CooperHewitt-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/CooperHewitt-Book.woff'), /* Pretty Modern Browsers */
+       url('fonts/CooperHewitt-Book.ttf'), /* Safari, Android, iOS */
+       url('fonts/CooperHewitt-Book.svg#svgCooperHewitt-Book') format('svg'); /* Legacy iOS */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CooperHewitt';
+  src: url('fonts/CooperHewitt-BookItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/CooperHewitt-BookItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/CooperHewitt-BookItalic.woff'), /* Pretty Modern Browsers */
+       url('fonts/CooperHewitt-BookItalic.ttf'), /* Safari, Android, iOS */
+       url('fonts/CooperHewitt-BookItalic.svg#svgCooperHewitt-MediumItalic') format('svg'); /* Legacy iOS */
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CooperHewitt';
   src: url('fonts/CooperHewitt-Medium.eot'); /* IE9 Compat Modes */
   src: url('fonts/CooperHewitt-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('fonts/CooperHewitt-Medium.woff'), /* Pretty Modern Browsers */
