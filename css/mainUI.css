@@ -22,7 +22,6 @@ h1{
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  vertical-align: center top;
 }
 .button{
   background-color: #ef4642;
@@ -49,8 +48,12 @@ h1{
 }
 .container {
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 2rem 0;
   width: 75%;
+}
+.three-columns {
+  border-bottom: 1px solid #d0d2d4;
+  padding: 2rem 0;
 }
 .column-image {
   margin: 2rem 0;
