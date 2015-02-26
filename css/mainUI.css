@@ -7,7 +7,7 @@ html, body {
   padding: 0;
 }
 header{
-  background: url('http://static.tumblr.com/eptv8ch/HaMnj8hrt/3120298679_0f5cbc9af6_o.jpg') no-repeat center center;
+  background: url('../img/cover-image.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
