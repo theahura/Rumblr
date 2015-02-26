@@ -122,10 +122,7 @@ socket.on('serverToClient', function(data)
 function receiveEnemyProfileList(data)
 {
 	console.log(data);
-	for (var index in data.enemyProfileList)
-	{
-		createPersonList(data.enemyProfileList[index]);
-	}
+	alert();
 }
 
 //This function returns the profile requested in the previous function

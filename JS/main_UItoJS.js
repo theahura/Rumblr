@@ -73,19 +73,3 @@ $(".refresh").click(function()
 // $(.userAge).html(userAge);
 // $(.userGender).html(userGender);
 // $(.currentLocation).html(currentLocation);
-
-
-
-function createPersonList(data)
-{
-	console.log(data);
-	var $EventObj = $("#People_Template").clone();
-
-	$EventObj.attr("id","");
-
-	$EventObj.find(".enemyUserName").html(data.userName);
-	$EventObj.find(".enemyUserGender").html(data.userGender);
-	$EventObj.find(".enemyEmailAddress").html(data.emailAddress);
-
-	$(".peopleList").append($EventObj);
-}
