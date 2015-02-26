@@ -8,18 +8,16 @@
 
 
       <!-- latest jQuery direct from google's CDN -->
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-      </script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-          <!--main CSS stylesheet for page -->
+      <!--main CSS stylesheet for page -->
       <link rel="stylesheet" type="text/css" href="css/mainUI.css">
       <link rel="stylesheet" type="text/css" href="css/home.css">
       <link rel="stylesheet" type="text/css" href="css/fonts.css">
       <link href='http://fonts.googleapis.com/css?family=Chivo:400,900,900italic,400italic' rel='stylesheet' type='text/css'>
 
       <!--Google Plus API-->
-      <script src="https://apis.google.com/js/client:platform.js" async defer>
-      </script>
+      <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 
       <!--Sockets -->
       <script src="http://54.86.173.127:3001/socket.io/socket.io.js"></script>
@@ -37,6 +35,8 @@
 
       <div id="fullpage">
         <div class="section"  style="background-color:#FFFFFF">
+
+          <!-- Left Panel - Contacts -->
           <div data-menuanchor="rumbles" class="slide">
             <div class="button refresh"><p>Refresh Lists</p></div>
               <ul class="swipeContainer"> 
@@ -45,26 +45,25 @@
                 </li>
                 <li>
                   <div class="newProfile">
-                    <div class="otherUserProfilePicture">
-                    </div> 
-                    <div class="spacer-5"></div>
+                    <div class="otherUserProfilePicture"></div> 
+
                     <div class="otherUserInfo otherUserName">
                       <strong><span class="enemyUserName"></span></strong>
                     </div>
-                    <div class="spacer-5"></div>
+
                     <div class="otherUserInfo otherUserGender">
                         <span class="enemyUserGender"></span>
                     </div>
-                    <div class="spacer-5"></div>
+
                     <div class="otherUserInfo otherUserAge">
                       <span class="enemyUserAge"></span>
                     </div>
+
                     <div class="otherUserInfo otherUserEmail">
                       <span class="enemyEmailAddress"></span>
                     </div>
-                    <div class="spacer-5"></div>
-                    <div class="otherUserInfo otherUserInterests">
-                    </div>
+
+                    <div class="otherUserInfo otherUserInterests"></div>
                   </div>
                 </li>
                 <li>
@@ -72,6 +71,8 @@
                 </li>
             </ul>
           </div>
+
+          <!-- Middle Panel - Swipes -->
           <div data-menuanchor="home" class="slide active">
             <h1>HOME</h1>
             <ul class="swipeContainer"> 
@@ -80,27 +81,25 @@
               </li>
               <li>
                 <div class="newProfile">
-                  <div class="otherUserProfilePicture">
-                  </div> 
-                  <div class="spacer-5"></div>
+                  <div class="otherUserProfilePicture"></div>
+
                   <div class="otherUserInfo otherUserName">
                     <strong><span class="enemyUserName"></span></strong>
                   </div>
-                  <div class="spacer-5"></div>
+
                   <div class="otherUserInfo otherUserGender">
                       <span class="enemyUserGender"></span>
                   </div>
-                  <div class="spacer-5"></div>
+
                   <div class="otherUserInfo otherUserAge">
                     <span class="enemyUserAge"></span>
                   </div>
+
                   <div class="otherUserInfo otherUserEmail">
                     <span class="enemyEmailAddress"></span>
                   </div>
-                  <div class="spacer-5"></div>
-                  <div class="otherUserInfo otherUserInterests">
-      
-                  </div>
+
+                  <div class="otherUserInfo otherUserInterests"></div>
                 </div>
                 <div class="button getRumblesButton" id="getNearbyRumblesButton">
                   Rumble!
@@ -111,11 +110,15 @@
               </li>
             </ul>
           </div>
+
+          <!-- Right Panel - Profile -->
           <div data-menuanchor="profile" class="slide">
+            
             <h1>User Profile</h1>
 
             <div class="container">
               <div class="grid profile">
+                <!-- The classes 'unit' and 'blank-of-blank' are used to divide page into columns using toast.css -->
                 <div class="unit two-of-five">
                   <div class="proImg"></div>
                 </div>
@@ -141,7 +144,6 @@
       <script type="text/javascript" src="JS/gplus.js"></script>
       <script type="text/javascript" src="JS/jquery.fullPage.js"></script>
       <script type="text/javascript" src="JS/main.js"></script>
-      <!--<script type="text/javascript" src="JS/chat.js"></script>-->
       <script type="text/javascript" src="JS/geolocation.js"></script>
       <script type="text/javascript" src="JS/mainUI.js"></script>
       <script type="text/javascript" src="JS/main_UItoJS.js"></script>
