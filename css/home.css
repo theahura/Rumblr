@@ -89,10 +89,6 @@ body {
     vertical-align: top;
   }
     .newProfile {
-      border-radius: 40px;
-      -moz-border-radius: 40px;
-      -webkit-border-radius: 40px;
-      background: #ef4642;
       width: 80%;
       height: 70%;
       margin: 0 10%;
